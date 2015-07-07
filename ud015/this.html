@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>this</title>
+		<meta name="author" content="zsimo" />
+		<!-- Date: 2015-02-28 -->
+	</head>
+	<body>
+
+
+
+
+	<script>
+
+
+		var fn = function (a, b) {
+			console.log(this);
+		}
+
+		var obj = {
+			"method" : fn
+		};
+		// fn.call(obj, 1, 2);
+		setTimeout(fn, 500);
+
+	</script>
+
+	</body>
+</html>
+

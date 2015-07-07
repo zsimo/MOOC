@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>pseudoclassical-subclasses</title>
+		<meta name="author" content="zsimo" />
+		<!-- Date: 2015-03-02 -->
+	</head>
+	<body>
+
+
+
+	<script>
+
+		// sezione 1: specifica dove le istanze della classe sono DIFFERENTI (differenti locazioni in memoria)
+		// DIFFERENTIATION CODE
+		// la variabile loc potra' avere valori diversi per ciascuna delle istanze della classe
+		var Car = function(loc) {
+			// this.Car = Object.create(Car.prototype);
+			var _private = "pippo";
+
+			this.getPrivate = function () {
+				return _private;
+			};
+			this.loc = loc;
+			// return this;
+		};
+		// sezione 2: specifica le proprieta che devono essere condivise tra le istanze della classe
+		// SIMILARITY CODE
+		Car.prototype.move = function () {
+		    this.loc++;
+		};
+
+		// subclass
+		// sezione 1: proprieta' non condivise
+		var Van = function (loc) {
+			// this.Van = Object.create(Van.prototype);
+			// run Car inside Van, puntando all'oggetto corretto
+			Car.call(this, loc);
+			// return this;
+		};
+		// sezione 2: proprieta' condivise
+		// Van.prototype delegate to Car.prototype
+		// override the Van.protorype object
+		Van.prototype = Object.create(Car.prototype);
+		// ripristino il corretto costruttore dopo l'override
+		Van.prototype.constructor = Van;
+		// ora posso aggiungere metodi alla subclass
+		Van.prototype.grab = function () {
+
+		};
+
+		// ====================================================================
+		// superclass
+		var zed = new Car(3);
+		zed.move();
+		console.log(zed);
+		console.log(zed.getPrivate());
+		// subclass
+		var amy = new Van(9);
+		console.log(amy);
+		console.log(amy.loc);
+		console.log(amy.getPrivate());
+		amy.move();
+		amy.grab();
+
+
+	</script>
+
+
+	</body>
+</html>
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Page Title</title>
+
+	<style>
+		#my-canvas {
+			border:1px solid black;
+		}
+	</style>
+	
+</head>
+<body>
+
+<canvas id="my-canvas" width="600" height="600">
+	Canvas is not supported by your browser.
+</canvas>
+
+<script>
+	
+var canvas;
+var context; 
+
+window.onload = init;
+
+function init () {
+
+	canvas = document.querySelector("#my-canvas");
+	// get graphic context
+	context = canvas.getContext("2d");
+
+	draw();
+
+}
+
+function draw () {
+
+
+	// save the context before modificating it
+	context.save();
+	context.translate(40, 40);
+
+	var imageObj = new Image();
+
+	imageObj.onload = function() {
+		// Draw the image only when we have the guarantee 
+		// that it has been loaded
+		context.drawImage(imageObj, 0, 0);
+
+		// restore the prevoius context
+		// the next drawing will be inalterated by the previous context modification
+		context.restore();
+	};
+
+	// Calls the imageObj.onload function asynchronously
+	imageObj.src = "http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png";
+
+
+
+
+
+
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>prova</title>
+		<meta name="author" content="zsimo" />
+		<!-- Date: 2015-03-04 -->
+	</head>
+	<body>
+
+
+	<script>
+
+
+		var padre = {
+			_private : "pippo",
+
+			getPrivate : function () {
+				return this._private;
+			}
+		};
+
+		// var p = padre();
+		console.log(padre.getPrivate());
+
+
+		var figlio = Object.create(padre);
+		figlio.nuovo = function () {
+			console.log("nuovo");
+		};
+		// var f = figlio();
+		console.log(figlio.getPrivate());
+		figlio.nuovo();
+
+	</script>
+
+
+
+	</body>
+</html>
+

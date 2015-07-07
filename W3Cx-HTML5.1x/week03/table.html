@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>table</title>
+	
+</head>
+<body>
+
+<table id="score">
+	<thead>
+		<tr>
+			<th>Test
+			<th>Result
+	<tfoot>
+		<tr>
+			<th>Average
+			<td>82%
+	<tbody>
+		<tr>
+			<td>A
+			<td>87%
+		<tr>
+			<td>B
+			<td>78%
+		<tr>
+			<td>C
+			<td>81%
+</table>
+
+<script>
+	// ==============================
+	// find second cell for each rows
+	// ==============================
+	// method 1
+	var table = document.getElementById("score");
+	var groups = table.tBodies;
+	var rows = null;
+	var cells = [];
+	for (var i = 0; i < groups.length; i++) {
+		rows = groups[i].rows;
+		for (var j = 0; j < rows.length; j++) {
+		console.log(rows[j].cells[1].parent);
+		cells.push(rows[j].cells[1]);
+		}
+	}
+	console.log(cells);
+
+	// method 2
+	var cells = document.querySelectorAll("#score>tbody>tr>td:nth-of-type(2)");
+	console.log(cells);
+
+</script>
+</body>
+</html>

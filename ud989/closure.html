@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>closure</title>
+		<meta name="author" content="zsimo" />
+		<!-- Date: 2015-03-02 -->
+	</head>
+	<body>
+
+
+
+		<button class="button">uno</button>
+		<button class="button">due</button>
+		<div id="counter"></div>
+
+
+
+		<script>
+
+			// var buttons = document.getElementsByClassName("button");
+//
+			// for (var i = 0; i < buttons.length; i ++) {
+				// buttons[i].addEventListener("click", function () {
+					// console.log("click");
+				// });
+			// }
+//
+// clear the screen for testing
+document.body.innerHTML = '';
+document.body.style.background="white";
+
+var nums = [1,2,3];
+
+// Let's loop over the numbers in our array
+for (var i = 0; i < nums.length; i++) {
+
+    // This is the number we're on...
+    var num = nums[i];
+
+    // We're creating a DOM element for the number
+    var elem = document.createElement('div');
+    elem.textContent = num;
+
+    // ... and when we click, alert the value of `num`
+    elem.addEventListener('click', (function(numCopy) {
+
+        return function () {
+        	alert(numCopy);
+        };
+    })(num));
+
+    // finally, let's add this element to the document
+    document.body.appendChild(elem);
+};
+
+
+		</script>
+
+	</body>
+</html>
+

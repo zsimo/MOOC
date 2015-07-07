@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>decorator</title>
+		<meta name="author" content="zsimo" />
+		<!-- Date: 2015-03-01 -->
+	</head>
+	<body>
+
+
+
+	<script>
+		var makeObject = function () {
+			return {example: "property"};
+		};
+
+		var obj1 = makeObject();
+		var obj2 = makeObject();
+
+		obj1.pippo = "22";
+
+		console.log(obj1);
+		console.log(obj2);
+
+		var a = function () {};
+		console.log(typeof a);
+
+	</script>
+
+
+
+	</body>
+</html>
+

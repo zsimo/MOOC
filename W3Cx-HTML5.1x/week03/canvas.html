@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Page Title</title>
+
+	<style>
+		#my-canvas {
+			border:1px solid black;
+		}
+	</style>
+	
+</head>
+<body>
+
+<canvas id="my-canvas" width="600" height="400">
+	Canvas is not supported by your browser.
+</canvas>
+
+<script>
+	
+var canvas;
+var context; 
+
+window.onload = init;
+
+function init () {
+
+	canvas = document.querySelector("#my-canvas");
+	// get graphic context
+	context = canvas.getContext("2d");
+
+	draw();
+
+}
+
+function draw () {
+
+
+	context.fillStyle = "red";
+	context.fillRect(10, 10, 50, 50);
+
+	context.clearRect(20, 20, 20, 20);
+
+	// save the context before modificating it
+	context.save();
+
+	// context modification
+	context.translate(100, 100);
+	context.rotate(45);
+	context.scale (1.5, 1.5);
+
+	context.strokeStyle = "blue";
+	context.lineWidth = 3;
+	context.strokeRect(100, 10, 50, 80);
+
+	// restore the prevoius context
+	// the next drawing will be inalterated by the previous context modification
+	context.restore();
+
+	context.fillStyle = "darkgrey";
+	context.font = 'normal 16pt Calibri';
+	context.fillText("hello", 170, 22);
+
+
+	context.strokeStyle = "blue";
+
+	context.moveTo(20,20);
+	context.lineTo(100, 100);
+	context.lineTo(100,0);
+	context.stroke();
+
+	context.moveTo(120,20);
+	context.lineTo(200, 100);
+	context.lineTo(200,0);
+	context.fillStyle = 'red'
+	context.fill();
+/*
+	// arc of circle starting from 0 to PI/2, located in (100, 100), with radius = 100
+	context.arc(100, 100, 100, 0, Math.PI/2);
+	context.stroke();
+	
+	// arc located in (100, 100), radius = 100, full circle from 0 to 2*PI
+	context.arc(300, 300, 100, 0, 2*Math.PI);
+	context.fillStyle = "lightBlue";
+	context.lineWidth = 5;
+	context.strokeStyle = "black";
+	context.fill();
+	context.stroke();
+	
+
+	var grd = context.createRadialGradient(150, 100, 30, 150, 100, 100);
+grd.addColorStop(0, "red");
+grd.addColorStop(0.17, "orange");
+grd.addColorStop(0.33, "yellow");
+grd.addColorStop(0.5, "green");
+grd.addColorStop(0.666, "blue");
+grd.addColorStop(1, "violet");
+context.fillStyle = grd;*/
+
+context.shadowColor = "Grey";    
+context.shadowBlur = 20;         
+context.shadowOffsetX = 15;      
+context.shadowOffsetY = 15;  
+
+context.fillStyle = 'red'; 
+context.fillRect(200, 200, 200, 100);
+
+context.strokeStyle = 'purple'; 
+context.lineWidth=10;
+context.strokeRect(120, 250, 200, 100);
+
+}
+
+</script>
+</body>
+</html>

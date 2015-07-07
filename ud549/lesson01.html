@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>lesson01</title>
+		<meta name="author" content="zsimo" />
+		<!-- Date: 2015-03-23 -->
+
+	  <link rel="shortcut icon" type="image/png" href="ud549/lib/jasmine-2.2.0/jasmine_favicon.png">
+	  <link rel="stylesheet" href="ud549/lib/jasmine-2.2.0/jasmine.css">
+
+	  <script src="ud549/lib/jasmine-2.2.0/jasmine.js"></script>
+	  <script src="ud549/lib/jasmine-2.2.0/jasmine-html.js"></script>
+	  <script src="ud549/lib/jasmine-2.2.0/boot.js"></script>
+
+	</head>
+	<body>
+
+
+
+	<script>
+
+		function add (x, y) {
+			var result;
+			if (typeof x !== "number" || typeof y !== "number") {
+				throw new Error("Params must be number.");
+			}
+			result = x + y;
+			if (parseInt(result) !== result) {
+				result = parseFloat(result.toFixed(1));
+			}
+			return result;
+		}
+
+		// console.log(add(0.1, 0.2) === 0.3);
+
+
+
+
+		// aspettative
+		// - che la funzione esiste
+		// - 2 + 3 deve dare 5
+		// - add("2", "3") deve comunque dare 5
+		// - errore se si usano stringhe
+		// - add(0.1, 0.2) = 0.3
+
+	// describe -> black
+	describe("First test suite", function() {
+		// it -> green
+
+		// each spec can contain piu' di un test
+		// tutti i test di una spec devono essere true perche' la spec passi
+		// SPEC
+		it("sum between floating numbers", function() {
+    		expect(add(0.1, 0.2)).toBe(0.3);
+    		expect(add(0.1, 0.2)).toBe(0.3);
+     	});
+
+		it("sum between floating numbers (not)", function() {
+    		expect(add(0.1, 0.2)).not.toBe("sss");
+  		});
+
+	});
+
+
+
+	</script>
+
+
+
+	</body>
+</html>
+

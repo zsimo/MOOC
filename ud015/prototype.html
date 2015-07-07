@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>prototype</title>
+		<meta name="author" content="zsimo" />
+		<!-- Date: 2015-03-01 -->
+	</head>
+	<body>
+
+
+
+
+
+		<script>
+			// var gold = {a : 1};
+			// // crea red a partire da gold (red eredita da gold)
+			// var red = Object.create(gold);
+			// console.log(red.a);
+			// console.log(red.constructor);
+			// console.log([].constructor);
+
+
+
+			var Car = function (loc) {
+				// delega a cercare metodi per Car in Car.methods
+				var obj = Object.create(Car.prototype);
+				obj.loc = loc;
+				return obj;
+			};
+			// Car.methods = {
+				// move: function () {
+					// this.loc ++;
+					// console.log(this.loc);
+				// }
+			// };
+			// prototype come oggetto che contiene funzioni comuni
+			Car.prototype.move = function () {
+					this.loc ++;
+					console.log(this.loc);
+			};
+			// the constructor point back to the function a cui e' stato attaccato (il costruttore di Car)
+			// Car --> prototype    ||    prototype --> Car
+			console.log(Car.prototype.constructor);
+			console.log(Car === Car.prototype.constructor); // true
+			// =================================================================
+			// ***** no "new" keyword
+			var amy = Car(1);
+			console.log(amy.constructor === Car.prototype.constructor); // true
+			console.log(amy.constructor === Car); // true
+			console.log(amy instanceof Car); // true
+			amy.move();
+			var ben = Car(9);
+			ben.move();
+
+		</script>
+
+
+
+
+
+
+	</body>
+</html>
+

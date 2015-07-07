@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>closure</title>
+		<meta name="author" content="zsimo" />
+		<!-- Date: 2015-02-28 -->
+	</head>
+	<body>
+
+
+
+
+
+
+
+		<script>
+
+			"use strict";
+
+
+
+			var arr01 = new function () {
+				var a = [1, 2, 3];
+				return a;
+			};
+			var arr02 = arr01;
+			arr02[0] = "pippo"
+			// arr02.push("pippo");
+			console.log(arr01);
+			console.log(arr02);
+
+
+
+			// var obj01 = {"uno":1, "due":2};
+			// var obj02 = obj01;
+			// obj02 = {};
+			// console.log(obj01);
+			// console.log(obj02);
+
+			// var a = "a";
+			// var b = a;
+			// b = "pippo";
+			// console.log(a);
+			// console.log(b);
+
+
+		</script>
+
+	</body>
+</html>
+

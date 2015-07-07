@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Page Title</title>
+
+
+</head>
+<body id="pippo">
+	<!-- The rest is content -->
+
+	<script>
+
+		// looping through array
+
+		var counter = 0;
+		var list = ["uno", "due", "tre"];
+
+		setInterval(function () {
+			console.log(counter % list.length);
+			counter ++;
+		}, 500);
+
+		console.log(document.body.attributes);
+		console.log(document.body.attributes[0]);
+		console.log(document.body.attributes[0].name);
+		console.log(document.body.attributes[0].value);
+
+	</script>
+</body>
+</html>
