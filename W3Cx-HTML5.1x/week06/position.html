@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Page Title</title>
+
+</head>
+<body>
+
+	<button id="position">Position</button>
+
+	<div id="result"></div>
+
+	<script>
+
+	document.getElementById("position").onclick = function (e) {
+		navigator.geolocation.getCurrentPosition(function (position) {
+
+			document.getElementById("result").innerHTML = "latitude: " + position.coords.latitude + "<br>" +
+			"longitude: " + position.coords.longitude + "<br>" +
+			"accuracy: " + position.coords.accuracy + "<br>" +
+			"altitude: " + position.coords.altitude + "<br>" +
+			"altitudeAccuracy: " + position.coords.altitudeAccuracy + "<br>" +
+			"heading: " + position.coords.heading + "<br>" +
+			"speed: " + position.coords.speed + "<br>";
+		}, function () {
+			alert("error");
+		});
+
+	};
+
+
+
+	</script>
+</body>
+</html>
