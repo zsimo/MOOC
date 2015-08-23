@@ -1,18 +1,22 @@
 // "use strict";
-console.log("");
-console.log("============================");
+console.log("============================================");
+console.log("Function declaration Vs Function expression");
+console.log("============================================");
 
 var foo = function bar() {
 
 	var foo = "baz";
 
+	bar.tre = "333";
+
 	function baz(foo) {
 		foo = bar;
-		foo;
+		foo.tre = "4444";
+
 		this.tre = 3;
 		baz.tre = 4;
-		// console.log(baz);
-		console.log(foo);;
+		console.log(bar.tre);
+		// console.log(foo);
 	}
 	baz();
 
