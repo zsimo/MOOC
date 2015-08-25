@@ -5,7 +5,7 @@ console.log("============================================");
 
 var foo = function bar() {
 
-	var foo = "baz";
+	// var foo = "baz";
 
 	bar.tre = "333";
 
@@ -22,9 +22,12 @@ var foo = function bar() {
 
 	this.uno = 1;
 	bar.due = 2;
-	// console.log(this.uno);
-	// console.log(bar.due);
+	// console.log(this === window);
+	foo.tre = 3;
+	console.log(foo.tre);
 };
 
 foo();
 // bar();
+
+
