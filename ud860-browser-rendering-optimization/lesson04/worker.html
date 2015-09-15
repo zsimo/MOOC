@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>worker</title>
+		<meta name="author" content="zsimo" />
+		<!-- Date: 2015-09-15 -->
+	</head>
+	<body>
+
+
+		<script>
+
+			// instantiate
+			var worker = new Worker("worker.js");
+			// start
+			worker.postMessage({
+				"data" : "data from main"
+			})
+
+			// handle events
+			worker.onmessage = function(e) {
+				console.log(e.data);
+			};
+			worker.onerror = function(e) {
+				function WorkerException(message) {
+					this.name = "custom error name";
+					this.message = "custom error message";
+				}
+				throw new WorkerException("worker error");
+			};
+
+
+
+		</script>
+
+
+	</body>
+</html>
+
