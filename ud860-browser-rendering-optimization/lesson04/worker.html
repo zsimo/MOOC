@@ -17,7 +17,8 @@
 			var worker = new Worker("worker.js");
 			// start
 			worker.postMessage({
-				"data" : "data from main"
+				"message" : "data from main",
+				"pippo" : "pippo"
 			})
 
 			// handle events
@@ -32,6 +33,10 @@
 				throw new WorkerException("worker error");
 			};
 
+
+			function definedInMain () {
+				console.log("definedInMain");
+			}
 
 
 		</script>
