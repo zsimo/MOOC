@@ -1,0 +1,9 @@
+
+/*force the browser to put an element to a different layer*/
+/*different layer -> minor painting*/
+/*https://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/*/
+#my-element {
+	tranform: translateZ(0);
+	/*suggerimento che il browser puo' ignorare*/
+	will-change: tranform;
+}
