@@ -1,6 +1,7 @@
 require('../libs/Nubilaria/utils.js');
 
-
+// http://reactivex.io/learnrx/
+// Exercise 11: Use map() and concatAll() to project and flatten the movieLists into an array of video ids
 var movieLists = [
 		{
 			name: "New Releases",
@@ -57,10 +58,3 @@ concatAll();
 console.log(out);
 
 console.log("-----------------------------------------------------------");
-// ------------   INSERT CODE HERE!  -----------------------------------
-// Use map and concatAll to flatten the movieLists in a list of video ids.
-// ------------   INSERT CODE HERE!  -----------------------------------
-  
-
-
-		

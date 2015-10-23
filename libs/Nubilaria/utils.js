@@ -8,8 +8,12 @@ Array.prototype.concatAll = function() {
 	return result;
 };
 
+var pretty = function (obj) {
+	return JSON.stringify(obj, null, 4);
+};
 
 
-module.exports.utils = {
-	concatAll : Array.prototype.concatAll
+module.exports = {
+	concatAll : Array.prototype.concatAll,
+	pretty : pretty
 };
