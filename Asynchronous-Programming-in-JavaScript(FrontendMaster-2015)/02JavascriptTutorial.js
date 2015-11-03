@@ -5,7 +5,7 @@ console.log("");
 
 // FOREACH: takes a function and apply that function 
 // to every item in an array
-console.log("FOREACH");
+console.log("[1, 2, 3].FOREACH");
 [1, 2, 3].forEach(function (par) {
 	console.log(par);
 });
@@ -15,7 +15,7 @@ console.log("");
 // MAP: creates a NEW array with the results of calling a 
 // provided function on every element in this array
 // with out changing the orginal array
-console.log("MAP");
+console.log("[1, 2, 3].MAP");
 var out = [1, 2, 3].map(function (par) {
 	return par + 1;
 });
@@ -31,3 +31,4 @@ var out = [1, 2, 3].filter(function (par) {
 });
 console.log(out);
 console.log("");
+
