@@ -31,6 +31,22 @@ Array.prototype.filter = Array.prototype.filter || function(predicateFunction) {
 	return result;
 };
 
+// JSON.stringify([ [1,2,3], [4,5,6], [7,8,9] ].concatAll()) === "[1,2,3,4,5,6,7,8,9]"
+// [1,2,3].concatAll(); // throws an error because this is a one-dimensional array
+Array.prototype.concatAll = Array.prototype.concatAll || function() {
+	var results = [];
+	this.forEach(function(subArray) {
+		subArray.forEach(function(item){
+			results.push(item);
+		});
+	});
+
+	return results;
+};
+
+
+
+
 
 var pretty = function (obj) {
 	return JSON.stringify(obj, null, 4);
