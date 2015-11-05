@@ -89,9 +89,24 @@ var movieLists = [
 // });
   var out = 
   movieLists.map(function(movieList){
-  	return movieList.videos;
-  }).
-  concatAll()
+  	return movieList.videos.map(function(movie){
+  		return {id:movie.id, title:movie.title, boxarts:movie.boxarts.filter(function(box){
+  			return box.width === 150 && box.height === 200;
+  		}).
+  		map(function(box){
+  			return box.url;
+  		})};
+  	})
+  }).concatAll()
+
+  // .concatAll()
+  // .map(function(movie){
+  // 	movie.boxarts.filter(function(boxart){
+	 // 	if (boxart.width === 150 && boxart.height === 200) {
+  // 			return boxart.url;
+  // 		}
+  // 	});
+  // })
   ;
 
 

@@ -9,6 +9,7 @@
   "author": "simone.sacchi@nubilaria.com",
   "license": "MIT",
   "dependencies": {
-    "nodemon": "^1.4.1"
+    "nodemon": "^1.4.1",
+    "purdy": "~1.4.1"
   }
 }
