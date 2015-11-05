@@ -1,5 +1,5 @@
-require('../libs/Nubilaria/utils.js');
-
+var utils = require('../libs/Nubilaria/utils.js');
+var pretty = utils.pretty;
 // http://reactivex.io/learnrx/
 // Exercise 11: Use map() and concatAll() to project and flatten the movieLists into an array of video ids
 var movieLists = [
@@ -55,6 +55,9 @@ var out = movieLists.map(function(list){
 }).
 concatAll();
 
-console.log(out);
+
+
+
+console.log(pretty(out));
 
 console.log("-----------------------------------------------------------");

@@ -10,7 +10,7 @@ Array.prototype.concatAll = function() {
 
 // MAP: creates a NEW array with the results of calling a 
 // provided function on every element in this array
-// with out changing the orginal array
+// with out changing the orginal arrayz
 Array.prototype.map = Array.prototype.map || function(projectionFunction) {
 	var result = [];
 	this.forEach(function(item){

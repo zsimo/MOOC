@@ -70,23 +70,32 @@ var movieLists = [
 // ];
 
 // return movieLists // Complete this expression!
-movieLists.map(function(list){
-	return list.videos.map(function(video){
-		return {"id":video.id, "title":video.title, "boxarts". video.boxarts};
-	}).
-	map(function(video){
-console.log(pretty(video));
-	}).
-	// filter(function(boxart){
-	// 	if (boxart.width === 150 && boxart.height === 200) {
-	// 		return boxart.url;
-	// 	}
-	// }).
-	concatAll().
-	map(function(list){
-		// console.log(pretty(list));
-	});
-});
+// movieLists.map(function(list){
+// 	return list.videos.map(function(video){
+// 		return {"id":video.id, "title":video.title, "boxarts". video.boxarts};
+// 	}).
+// 	map(function(video){
+// console.log(pretty(video));
+// 	}).
+// 	// filter(function(boxart){
+// 	// 	if (boxart.width === 150 && boxart.height === 200) {
+// 	// 		return boxart.url;
+// 	// 	}
+// 	// }).
+// 	concatAll().
+// 	map(function(list){
+// 		// console.log(pretty(list));
+// 	});
+// });
+  var out = 
+  movieLists.map(function(movieList){
+  	return movieList.videos;
+  }).
+  concatAll()
+  ;
+
+
+  console.log(pretty(out));
 
 console.log("---------------------------------------------");
 // console.log(movieLists);
