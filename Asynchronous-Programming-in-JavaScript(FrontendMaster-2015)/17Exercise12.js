@@ -69,45 +69,30 @@ var movieLists = [
 //	 {"id": 70111470,"title": "Die Hard","boxart":"http://cdn-0.nflximg.com/images/2891/DieHard150.jpg" }
 // ];
 
-// return movieLists // Complete this expression!
-// movieLists.map(function(list){
-// 	return list.videos.map(function(video){
-// 		return {"id":video.id, "title":video.title, "boxarts". video.boxarts};
-// 	}).
-// 	map(function(video){
-// console.log(pretty(video));
-// 	}).
-// 	// filter(function(boxart){
-// 	// 	if (boxart.width === 150 && boxart.height === 200) {
-// 	// 		return boxart.url;
-// 	// 	}
-// 	// }).
-// 	concatAll().
-// 	map(function(list){
-// 		// console.log(pretty(list));
-// 	});
-// });
-  var out = 
-  movieLists.map(function(movieList){
-  	return movieList.videos.map(function(movie){
-  		return {id:movie.id, title:movie.title, boxarts:movie.boxarts.filter(function(box){
-  			return box.width === 150 && box.height === 200;
-  		}).
-  		map(function(box){
-  			return box.url;
-  		})};
-  	})
-  }).concatAll()
 
-  // .concatAll()
-  // .map(function(movie){
-  // 	movie.boxarts.filter(function(boxart){
-	 // 	if (boxart.width === 150 && boxart.height === 200) {
-  // 			return boxart.url;
-  // 		}
-  // 	});
+  // var out = 
+  // movieLists.map(function(movieList){
+  // 	return movieList.videos.map(function(movie){
+  // 		return {id:movie.id,
+  // 				title:movie.title,
+  // 				boxarts:movie.boxarts.filter(function(box){
+  // 					return box.width === 150 && box.height === 200;
+  // 				})
+  // 				.map(function(box){
+  // 					return {id:box.id, title:box.title,url:box.url};
+  // 				})
+  // 		};
+  // 	})
   // })
-  ;
+  // .concatAll()
+  // ;
+
+ var out = 
+  movieLists.map(function(movieList){
+  	return movieList.videos;
+  })
+  // .concatAll()
+  ;  
 
 
   console.log(pretty(out));
