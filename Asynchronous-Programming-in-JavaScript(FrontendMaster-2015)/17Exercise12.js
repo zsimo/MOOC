@@ -91,7 +91,32 @@ var movieLists = [
   movieLists.map(function(movieList){
   	return movieList.videos;
   })
+  .concatAll()
+  .map(function(movie){
+  	return {id:movie.id, title: movie.title, url: movie.boxarts
+  									.filter(function(box){
+  										return box.width === 150 && box.height === 200;
+  									})
+  									.map(function(box){
+  										return [{url:box.url}];
+  									})	
+  									.concatAll()   	
+  									.map(function(box){
+  										return box.url;
+  									})			
+
+  									};
+  })
+  .map(function(video){
+  	return {id:video.id,
+  				title:video.title,
+  				url:video.url.map(function(url){
+  											return [url];
+  										}).concatAll()
+  			};
+  })
   // .concatAll()
+
   ;  
 
 
