@@ -102,7 +102,7 @@ var movieLists = [
   									})	
   									.concatAll()   	
   									.map(function(box){
-  										return box.url;
+  										return [box.url];
   									})			
 
   									};
@@ -112,15 +112,33 @@ var movieLists = [
   				title:video.title,
   				url:video.url.map(function(url){
   											return [url];
-  										}).concatAll()
+  										})
+  										.concatAll()
+  										.concatAll()
+  										
   			};
   })
-  // .concatAll()
 
   ;  
 
 
-  console.log(pretty(out));
+  var out2 = movieLists.
+	  map(function(movieList) {
+		return movieList.videos
+						.map(function(video){
+							return video.boxarts.filter(function(box){
+								return box.width === 150 && box.height === 200;
+							})
+							.map(function(box){
+								return {id:video.id, title:video.title, boxart:box.url};
+							});
+						})
+						.concatAll();
+	  }).concatAll();
+
+
+
+  console.log(pretty(out2));
 
 console.log("---------------------------------------------");
 // console.log(movieLists);
