@@ -45,7 +45,22 @@ Array.prototype.concatAll = Array.prototype.concatAll || function() {
 };
 
 
+// replace any map follow by concatAll
+Array.prototype.concatMap = function(projectionFunctionThatReturnsArray) {
+	return this
+		.map(function(item){
+			return projectionFunctionThatReturnsArray(item);
+		})
+		// apply the concatAll function to flatten the two-dimensional array
+		.concatAll();
+};
 
+
+// usato quando serve considerare 2 elementi per volta di un array
+// return array od one value
+Array.prototype.reduceAsync = function(){
+
+};
 
 
 var pretty = function (obj) {
