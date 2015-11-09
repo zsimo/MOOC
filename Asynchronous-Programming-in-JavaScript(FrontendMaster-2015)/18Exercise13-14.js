@@ -95,11 +95,11 @@ var pretty = utils.pretty;
 })();
 
 
-var out2 = [1, 2, 3].reduce(function(accumulateValue, currentValue){
-	// return x + y;
-	console.log(accumulateValue);
-	console.log(currentValue);
-	console.log("************************");
-});
-console.log(out2);
+//var out2 = [1, 2, 3].reduce(function(accumulateValue, currentValue){
+//	// return x + y;
+//	console.log(accumulateValue);
+//	console.log(currentValue);
+//	console.log("************************");
+//});
+//console.log(out2);
 		
