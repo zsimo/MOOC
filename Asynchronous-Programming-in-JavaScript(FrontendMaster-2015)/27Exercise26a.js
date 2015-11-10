@@ -61,29 +61,32 @@ var out = lists
 								.filter(function(video){
 									return video.listId === list.id;
 								})
-								.map(function(video) {
-									var books = bookmarks.filter(function(book){
+								.concatMap(function(video) {
+									var time = bookmarks.filter(function(book){
 													return video.id === book.videoId;
-												})
-												.map(function(book){
-													return {time:book.time};
 												});
 
 									var boxart = boxarts.filter(function(box){
 															return box.videoId === video.id;
 														})
-														.reduce(function(acc, curr){
+														.reduceAsync(function(acc, curr){
 															var currWidth = curr.width * curr.height;
 															var accWidth = acc.width * acc.height;
 
-															return currWidth > accWidth ? currWidth : accWidth;
+															return currWidth > accWidth ? curr : acc;
 														});
-									return {
+
+									return [].zip(time, boxart, function(time, boxart){
+										return {
 											"id":video.id,
 											"title":video.title,
-											"time" : books,
-											"boxart":boxart
+											"time" : time.time,
+											"boxart":boxart.url
 										};
+									});
+									
+
+
 								})
 
 				};
