@@ -93,8 +93,22 @@ Array.prototype.reduceAsync = function(combiner, initialValue){
 };
 
 
-var pretty = function (obj) {
-	return JSON.stringify(obj, null, 4);
+Array.prototype.zip = function(left, right, combinerFunction) {
+	var counter,
+		results = [];
+
+	for(counter = 0; counter < Math.min(left.length, right.length); counter++) {
+		// Add code here to apply the combinerFunction to the left and right-hand tems in the respective arrays
+    	results.push(combinerFunction(left[counter], right[counter]));
+	}
+
+	return results;
+};
+		
+
+var pretty = function (obj, indent) {
+	var indent = indent || 4;
+	return JSON.stringify(obj, null, indent);
 };
 
 
