@@ -84,8 +84,6 @@ var out = lists
 											"boxart":boxart.url
 										};
 									});
-									
-
 
 								})
 
