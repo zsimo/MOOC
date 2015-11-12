@@ -20,5 +20,14 @@ var subscribe = function(button) {
 
 				// Stop traversing the button clicks
 				subscription.dispose();
-			});
+				console.log("onNext");
+			}
+			, function(error){
+				console.log("onError");
+			}
+			, function(){
+				console.log("onCompleted");
+			}
+
+			);
 }

@@ -32,4 +32,4 @@ var subscription = mouseMove.forEach(
 
 
 // Declarative create Event Streams that end on certain condition
-// no more need to build "stata machine"
+// no more need to build "state machine"
