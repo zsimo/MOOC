@@ -23,5 +23,28 @@ function timeout (time) {
 			};
 		}
 	};
+}
 
+
+var ops = timeout(5000).foreach(function(){
+	ops.dispose();
+});
+
+function fromEvent(dom, eventName) {
+	return {
+		"forEach" : function(observer){
+			dom.addEventListener(eventName, function (event) {
+				observer.onNext(event);
+				// an event does not completes
+				// observer.onCompleted();
+			});
+
+
+			return {
+				"dispose" : function(){
+					clearTimeout(handler);
+				}
+			};
+		}
+	};
 }
