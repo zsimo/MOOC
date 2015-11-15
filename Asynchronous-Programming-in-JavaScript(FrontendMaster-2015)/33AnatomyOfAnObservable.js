@@ -33,16 +33,19 @@ var ops = timeout(5000).foreach(function(){
 function fromEvent(dom, eventName) {
 	return {
 		"forEach" : function(observer){
-			dom.addEventListener(eventName, function (event) {
+
+			var handler = function (event) {
 				observer.onNext(event);
 				// an event does not completes
 				// observer.onCompleted();
-			});
+			};
+
+			dom.addEventListener(eventName, handler);
 
 
 			return {
 				"dispose" : function(){
-					clearTimeout(handler);
+					dom.removeEventListener(eventName, handler);
 				}
 			};
 		}
