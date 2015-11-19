@@ -1,5 +1,5 @@
 {
-  "name": "Advanced-JavaScript-Frontend-Masters-2015",
+  "name": "mooc",
   "version": "1.0.0",
   "description": "exercises",
   "main": "exe01.js",
@@ -10,6 +10,9 @@
   "license": "MIT",
   "dependencies": {
     "nodemon": "^1.8.1",
-    "purdy": "~1.4.1"
+    "purdy": "~1.4.1",
+    "rx": "~4.0.7",
+    "jquery": "~2.1.4",
+    "webpack": "~1.12.6"
   }
 }

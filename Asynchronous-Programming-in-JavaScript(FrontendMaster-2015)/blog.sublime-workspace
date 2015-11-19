@@ -1,0 +1,377 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"time",
+				"timeout	setTimeout function"
+			],
+			[
+				"cl",
+				"click"
+			],
+			[
+				"list",
+				"listId"
+			],
+			[
+				"video",
+				"videoId"
+			],
+			[
+				"vi",
+				"video"
+			],
+			[
+				"int",
+				"interestingMoments"
+			],
+			[
+				"movi",
+				"movieList"
+			],
+			[
+				"con",
+				"concatMap"
+			],
+			[
+				"reduce",
+				"reduceAsync"
+			],
+			[
+				"boxart",
+				"boxarts"
+			],
+			[
+				"box",
+				"boxarts"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"elmt",
+				"element"
+			],
+			[
+				"ele",
+				"element"
+			],
+			[
+				"o",
+				"out"
+			],
+			[
+				"fu",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 133.0,
+		"last_filter": "intall",
+		"selected_items":
+		[
+			[
+				"intall",
+				"Package Control: Install Package"
+			],
+			[
+				"white",
+				"Set Syntax: HTML with mustaches"
+			],
+			[
+				"color",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"install",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"nistal",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/X/blog"
+	],
+	"file_history":
+	[
+		"/X/blog/app/Http/routes.php",
+		"/X/blog/app/Http/Controllers/ImporterController.php",
+		"/X/blog/webpack.config.js",
+		"/X/blog/package.json",
+		"/X/blog/public/js/importer-bundle.js",
+		"/X/blog/resources/views/base/master.blade.php",
+		"/X/blog/resources/assets/js/importer.js",
+		"/X/blog/resources/views/base/partials/retrieve.blade.php",
+		"/X/blog/resources/views/base/retrieve-partials/upload.blade.php",
+		"/X/blog/resources/views/base/retrieve-partials/download.blade.php",
+		"/X/blog/resources/views/base/retrieve-partials/download.mustache",
+		"/C/Users/simone.sacchi.NUBILARIA-EU/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/simone.sacchi.NUBILARIA-EU/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/X/blog/resources/views/nationalcodes/nationalcodes.blade.php",
+		"/X/blog/resources/views/base/partials/import.blade.php",
+		"/X/blog/resources/views/base/partials/update.blade.php",
+		"/X/blog/resources/views/base/partials/header.blade.php",
+		"/X/blog/resources/views/base/import.blade.php",
+		"/X/blog/resources/views/nationalcodes/retrieve.blade.php",
+		"/X/blog/app/Http/Controllers/NationalcodesController.php",
+		"/X/blog/resources/views/base/_retrieve.blade.php",
+		"/X/blog/resources/views/base/retrieve.blade.php",
+		"/X/blog/resources/views/base/update.blade.php",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/webpack.config.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/.bin/webpack.config.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/jquery/src/ajax/load.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/jquery/src/ajax/var/nonce.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/jquery/src/ajax/jsonp.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/rx/ts/es6-promise.es6.d.ts",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/rx/component.json",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/rx/authors.txt",
+		"/C/Users/simone.sacchi.NUBILARIA-EU/AppData/Roaming/Sublime Text 3/Packages/Colorsublime/Colorsublime.sublime-settings",
+		"/X/blog/resources/views/mustache.mustache",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/package.json",
+		"/X/blog/public/.htaccess",
+		"/C/Users/simone.sacchi.NUBILARIA-EU/Desktop/m.mustache",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/npm-debug.log",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/libs/Nubilaria/utils.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/26Exercise25.js",
+		"/C/Users/simone.sacchi.NUBILARIA-EU/Desktop/iporter.txt",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/18Exercise13-14.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/23Exercise24.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/21Exercise20.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/20Exercise18-19.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/19Exercise15-17.js",
+		"/C/Users/simone.sacchi.NUBILARIA-EU/Desktop/test.json",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/05Observable.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/04IteratorsAndObserver.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/17Exercise12.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/16Exercise6-11.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/02JavascriptTutorial.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/versions.txt",
+		"/C/Users/simone.sacchi.NUBILARIA-EU/Desktop/FrontendMaster/Asynchronous Programming in JavaScript/info.txt",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/nodemon.json",
+		"/Z/swift_loginpage_html_corrections/index.html",
+		"/Z/nubilaria-site-v5/js/nubilaria-site-v5.js",
+		"/Z/nubilaria-site-v5/css/nubilaria-site-v5.css",
+		"/Z/nubilaria-site-v5/index.php",
+		"/Z/nubilaria-site-v5/js/lt-ie9.js",
+		"/Z/nubilaria-site-v5/templates/contacts.mustache",
+		"/Z/nubilaria-site-v5/templates/about.mustache",
+		"/Z/nubilaria-site-v3/public/imgs/header/logo-nubilaria-dark-2014.png",
+		"/C/Users/simone.sacchi.NUBILARIA-EU/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/simone.sacchi.NUBILARIA-EU/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/simone.sacchi.NUBILARIA-EU/AppData/Roaming/Sublime Text 3/Packages/User/Pretty JSON.sublime-settings",
+		"/C/Users/simone.sacchi.NUBILARIA-EU/Desktop/conf.json",
+		"/Z/nubilaria-site-v4/css/nubilaria-site-v5.css",
+		"/Z/nubilaria-site-v4/js/nubilaria-site-v5.js",
+		"/C/Users/simone.sacchi.NUBILARIA-EU/AppData/Roaming/Sublime Text 3/Packages/Pretty JSON/Pretty JSON.sublime-settings",
+		"/Z/nubilaria-site-v3/templates/home.mustache",
+		"//LEONARDO/swiftref/docs/sepaio/screenshots/sepaio_4_b.html"
+	],
+	"find":
+	{
+		"height": 42.0
+	},
+	"find_in_files":
+	{
+		"height": 114.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"wrap",
+			"space",
+			"tab",
+			"white_space",
+			"pane",
+			"importer",
+			"utils",
+			"()\n",
+			"changeImage",
+			"changePageContent",
+			"changeImage",
+			"logo-nubilaria",
+			"technology",
+			"comment",
+			"background",
+			"technology"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "blog.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"nationa",
+				"app\\Http\\Controllers\\NationalcodesController.php"
+			],
+			[
+				"downlo",
+				"resources\\views\\base\\retrieve-partials\\download.blade.php"
+			],
+			[
+				"dowlo",
+				"resources\\views\\base\\retrieve-partials\\download.mustache"
+			],
+			[
+				"retri",
+				"resources\\views\\base\\retriever.blade.php"
+			],
+			[
+				"nation",
+				"app\\Http\\Controllers\\NationalcodesController.php"
+			],
+			[
+				"rout",
+				"app\\Http\\routes.php"
+			],
+			[
+				"musta",
+				"resources\\views\\mustache.mustache"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 313.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
