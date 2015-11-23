@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"result",
+				"resultSet"
+			],
+			[
 				"hea",
 				"header	Tag"
 			],
@@ -76,18 +80,10 @@
 	"buffers":
 	[
 		{
-			"file": "Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/33AnatomyOfAnObservable.js",
-			"settings":
-			{
-				"buffer_size": 928,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/38Exercise34.js",
 			"settings":
 			{
-				"buffer_size": 520,
+				"buffer_size": 2293,
 				"line_ending": "Windows"
 			}
 		},
@@ -95,7 +91,7 @@
 			"file": "Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/38Exercise34.html",
 			"settings":
 			{
-				"buffer_size": 319,
+				"buffer_size": 389,
 				"line_ending": "Windows"
 			}
 		}
@@ -154,12 +150,15 @@
 	"expanded_folders":
 	[
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/jquery",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/jquery/dist"
 	],
 	"file_history":
 	[
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/33AnatomyOfAnObservable.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/38Exercise34.js",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/package.json",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/webpack.config.js",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/jquery/src/ajax.js",
@@ -230,6 +229,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			");\n",
 			"utils",
 			"()\n",
 			"changeImage",
@@ -262,19 +262,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/33AnatomyOfAnObservable.js",
+					"file": "Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/38Exercise34.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 928,
+						"buffer_size": 2293,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								859,
-								859
+								1814,
+								1814
 							]
 						],
 						"settings":
@@ -283,7 +283,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 581.0,
+						"translation.y": 1275.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -291,47 +291,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/38Exercise34.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 520,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								26,
-								26
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/38Exercise34.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 319,
+						"buffer_size": 389,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								154,
-								154
+								286,
+								286
 							]
 						],
 						"settings":
@@ -433,7 +405,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 251.0,
+	"side_bar_width": 50.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
