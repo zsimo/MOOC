@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"hea",
+				"header	Tag"
+			],
+			[
 				"time",
 				"timeout	setTimeout function"
 			],
@@ -80,18 +84,18 @@
 			}
 		},
 		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 378,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/38Exercise34.js",
 			"settings":
 			{
-				"buffer_size": 105,
+				"buffer_size": 520,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/38Exercise34.html",
+			"settings":
+			{
+				"buffer_size": 319,
 				"line_ending": "Windows"
 			}
 		}
@@ -151,14 +155,15 @@
 	[
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules",
-		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/.bin",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/jquery",
-		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/jquery/src",
-		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/ud989"
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/jquery/dist"
 	],
 	"file_history":
 	[
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/package.json",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/webpack.config.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/jquery/src/ajax.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/jquery/src/jquery.js",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/.bin/webpack.config.js",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/jquery/src/ajax/load.js",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/jquery/src/ajax/var/nonce.js",
@@ -170,7 +175,6 @@
 		"/C/Users/simone.sacchi.NUBILARIA-EU/AppData/Roaming/Sublime Text 3/Packages/Colorsublime/Colorsublime.sublime-settings",
 		"/X/blog/app/Http/routes.php",
 		"/X/blog/resources/views/mustache.mustache",
-		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/package.json",
 		"/X/blog/public/.htaccess",
 		"/C/Users/simone.sacchi.NUBILARIA-EU/Desktop/m.mustache",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/npm-debug.log",
@@ -253,7 +257,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -282,54 +286,24 @@
 						"translation.y": 581.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 378,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								378
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/38Exercise34.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 105,
+						"buffer_size": 520,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								91,
-								91
+								26,
+								26
 							]
 						],
 						"settings":
@@ -340,7 +314,35 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/38Exercise34.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 319,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								154,
+								154
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -431,7 +433,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 376.0,
+	"side_bar_width": 251.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
