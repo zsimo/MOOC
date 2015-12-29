@@ -76,3 +76,42 @@ myArray.splice(1, 1);
 // false == null // false
 // null == undefined // true
 // ' \t\r\n ' == 0 // true
+// 
+
+function sum() {
+    var i,
+        n = arguments.length,
+        total = 0;
+    for (i = 0; i < n; i += 1) {
+        total += arguments[i];
+    }
+    return total;
+}
+// var ten = sum(1, 2, 3, 4);
+
+
+
+
+function new_constructor(initializer, methods, extend) {
+    var prototype = Object.create(typeof extend === 'function'
+        ? extend.prototype
+        : extend);
+    if (methods) {
+        methods.keys().forEach(function (key) {
+            prototype[key] = methods[key];
+}); }
+    function constructor() {
+        var that = Object.create(prototype);
+        if (typeof initializer === 'function') {
+            initializer.apply(that, arguments);
+        }
+        return that;
+    }
+    constructor.prototype = prototype;
+    prototype.constructor = constructor;
+    return constructor;
+  }
+
+
+
+
