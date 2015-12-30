@@ -1,4 +1,4 @@
-// ../node_modules/.bin/live-server --quiet
+// ./node_modules/.bin/live-server --quiet
 
 // Pseudoclassical
 function Gizmo(id) {
@@ -7,7 +7,7 @@ function Gizmo(id) {
 Gizmo.prototype.toString = function () {
     return "gizmo " + this.id;
 };
-
+  
 
 var uno = function() {
 
