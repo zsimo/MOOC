@@ -1,3 +1,5 @@
+// ./node_modules/.bin/live-server --quiet
+
 
 function add(x, y) {
     return x + y;
@@ -80,4 +82,28 @@ var counterf = function (num) {
 var counter = counterf(10);
 console.log(counter.inc());    // 11
 console.log(counter.dec());    // 10
+console.log("=======================================");
+
+
+var revocable = function (func) {
+    return {
+        revoke : function () {
+           func = null;
+        },
+        invoke : function (msg) {
+            // if (run) {
+                func(msg);
+            // } else {
+            //     throw new Error("unable to run");
+            // }
+        },
+    }
+};
+
+var temp = revocable(function(par){
+    console.log(par);
+});
+temp.invoke(7); // alert: 7
+temp.revoke();
+// temp.invoke(8);
 console.log("=======================================");

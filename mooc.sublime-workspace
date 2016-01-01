@@ -84,18 +84,18 @@
 	"buffers":
 	[
 		{
-			"file": "JavaScript-the-Good-Parts(FrontendMaster-2015)/javascriptFundametals-prototype.js",
+			"file": "JavaScript-the-Good-Parts(FrontendMaster-2015)/index.html",
 			"settings":
 			{
-				"buffer_size": 108,
+				"buffer_size": 216,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "JavaScript-the-Good-Parts(FrontendMaster-2015)/javascriptFundametals-new-operator.js",
+			"file": "JavaScript-the-Good-Parts(FrontendMaster-2015)/19Problems.js",
 			"settings":
 			{
-				"buffer_size": 273,
+				"buffer_size": 2555,
 				"line_ending": "Windows"
 			}
 		}
@@ -107,16 +107,24 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 354.0,
-		"last_filter": "color",
+		"height": 133.0,
+		"last_filter": "install",
 		"selected_items":
 		[
 			[
-				"color",
-				"Colorsublime: Install Theme"
+				"install",
+				"Package Control: Install Package"
 			],
 			[
-				"install",
+				"ins",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"color",
 				"Colorsublime: Install Theme"
 			],
 			[
@@ -132,7 +140,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 382.0
+		"width": 416.0
 	},
 	"console":
 	{
@@ -154,15 +162,18 @@
 	"expanded_folders":
 	[
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC",
-		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/JavaScript-the-Good-Parts(FrontendMaster-2015)",
-		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/ud860-browser-rendering-optimization"
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/JavaScript-the-Good-Parts(FrontendMaster-2015)"
 	],
 	"file_history":
 	[
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/package.json",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/JavaScript-the-Good-Parts(FrontendMaster-2015)/crockford-libs.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/JavaScript-the-Good-Parts(FrontendMaster-2015)/javascriptFundametals-prototype.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/JavaScript-the-Good-Parts(FrontendMaster-2015)/libs.js",
+		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/JavaScript-the-Good-Parts(FrontendMaster-2015)/javascriptFundametals-new-operator.js",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/38Exercise34.html",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/38Exercise34.js",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/33AnatomyOfAnObservable.js",
-		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/package.json",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/Asynchronous-Programming-in-JavaScript(FrontendMaster-2015)/webpack.config.js",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/jquery/src/ajax.js",
 		"/C/wamp/www/botticelli-simone.sacchi/test/MOOC/node_modules/jquery/src/jquery.js",
@@ -260,65 +271,65 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "JavaScript-the-Good-Parts(FrontendMaster-2015)/javascriptFundametals-prototype.js",
+					"file": "JavaScript-the-Good-Parts(FrontendMaster-2015)/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 108,
+						"buffer_size": 216,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								108,
-								108
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "JavaScript-the-Good-Parts(FrontendMaster-2015)/javascriptFundametals-new-operator.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 273,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								273,
-								273
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "JavaScript-the-Good-Parts(FrontendMaster-2015)/19Problems.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2555,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2390,
+								2390
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1797.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
