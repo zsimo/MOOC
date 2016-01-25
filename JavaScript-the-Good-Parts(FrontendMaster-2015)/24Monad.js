@@ -1,5 +1,7 @@
 function MONAD() {
+    // unit is like a constructors
     return function unit(value) {
+        // monad is an object
         var monad = Object.create(null);
         monad.bind = function (func) {
             return func(value);
@@ -12,6 +14,6 @@ function log (msg) {
     console.log(msg);
 }
 
-var identity = MONAD();
-var monad = identity("Hello world.");
+var unit = MONAD();
+var monad = unit("Hello world");
 monad.bind(log);

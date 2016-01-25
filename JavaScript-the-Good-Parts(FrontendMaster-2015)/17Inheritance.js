@@ -1,4 +1,4 @@
-// ./node_modules/.bin/live-server --quiet
+// ./node_modules/.bin/live-server --quiet --browser=chrome
 
 // Pseudoclassical
 function Gizmo(id) {
