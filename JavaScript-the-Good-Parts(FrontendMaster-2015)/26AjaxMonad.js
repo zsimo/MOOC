@@ -12,7 +12,7 @@ function MONAD() {
         return monad;
     }
 
-    unit.method = function (name, func) {
+    unit.lift = function (name, func) {
         prototype[name] = func;
         return unit;
     };
