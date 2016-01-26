@@ -107,7 +107,7 @@ Array.prototype.zip = function(left, right, combinerFunction) {
 		
 
 var pretty = function (obj, indent) {
-	var indent = indent || 4;
+	indent = indent || 4;
 	return JSON.stringify(obj, null, indent);
 };
 
