@@ -13,6 +13,11 @@
 
 
 var mouseMove = Observable.fromEvent(element, "mousemove");
+// An Observable is a lot like an Event.
+// Like an Event, an Observable is a sequence of values that a data producer pushes to the consumer.
+// However unlike an Event, an Observable can signal to a listener that it has completed,
+// and will send no more data.
+
 // Observable come un DOM event
 // che accetta 3 callbacks:
 // - onNext()

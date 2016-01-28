@@ -7,6 +7,12 @@
 
 // registrarsi ad un Observable e' come registrarsi ad un evento ma con 3 callbacks
 
+// Subscribing to an Event and traversing an Array are fundamentally the same operation.
+// The only difference is that Array traversal is synchronous and completes,
+// and Event traversal is asynchronous and never completes.
+// If we convert a button click Event to an Observable object, 
+// we can use forEach() to traverse the Event.
+
 
 function timeout (time) {
 	return {
@@ -26,7 +32,7 @@ function timeout (time) {
 }
 
 
-var ops = timeout(5000).foreach(function(){
+var ops = timeout(5000).forEach(function(){
 	ops.dispose();
 });
 
