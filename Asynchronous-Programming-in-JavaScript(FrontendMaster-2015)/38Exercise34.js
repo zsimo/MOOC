@@ -75,12 +75,20 @@ var searchResultsSet = keypresses
 						})
 						.switchLatest();
 
-searchResultsSet.forEach(function(resultSet){
-							// console.log(result);
-							// results.value = JSON.stringify(resultSet);
-							results.value = resultSet;
-						},
-						function(error){
-							console.log(error);
-						});
+// searchResultsSet.forEach(function(resultSet){
+// 							// console.log(result);
+// 							// results.value = JSON.stringify(resultSet);
+// 							results.value = resultSet;
+// 						},
+// 						function(error){
+// 							console.log(error);
+// 						});
+
+var keydowObservable = Observable.fromEvent(textbox, "keydown");
+keydowObservable.forEach(function (e) {
+	console.log(e.keyCode);
+	console.log(e);
+});
+
+
 
