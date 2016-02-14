@@ -1,6 +1,4 @@
-var textBox = document.getElementsByTagName("input");
-console.log(textBox);
-
+var = document.getElementsByTagName("input");
 var observable;
 var keyPresses = Rx.Observable.fromEvent(textBox, "keypress");
 var _onNext = function (event) {
@@ -49,6 +47,15 @@ var getWikipdiaSearchResults = function(term) {
 // 	console.log(results );
 // });
 
+var keypresses = Rx.Observable.fromEvent(textBox, "keypress");
 observable = keyPresses
 				.throttle(20)
 				.map(_onNext, _onError, _onCompleted);
+
+keyPresses.map(function (data) {
+console.log(data);
+});
+
+// observable.forEach(function (data) {
+// 	console.log(data);
+// });
