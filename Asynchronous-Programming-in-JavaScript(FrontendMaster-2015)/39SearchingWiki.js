@@ -1,4 +1,4 @@
-var = document.getElementsByTagName("input");
+var textBox = document.getElementsByTagName("input");
 var observable;
 var keyPresses = Rx.Observable.fromEvent(textBox, "keypress");
 var _onNext = function (event) {
@@ -53,7 +53,9 @@ observable = keyPresses
 				.map(_onNext, _onError, _onCompleted);
 
 keyPresses.map(function (data) {
-console.log(data);
+	return "uno";
+}).forEach(function(data){
+	console.log(data);
 });
 
 // observable.forEach(function (data) {
