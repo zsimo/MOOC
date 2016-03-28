@@ -47,10 +47,9 @@ var getWikipdiaSearchResults = function(term) {
 // 	console.log(results );
 // });
 
-var keypresses = Rx.Observable.fromEvent(textBox, "keypress");
-observable = keyPresses
-				.throttle(20)
-				.map(_onNext, _onError, _onCompleted);
+//observable = keyPresses
+//				.throttle(20)
+//				.map(_onNext, _onError, _onCompleted);
 
 keyPresses.map(function (data) {
 	return "uno";
