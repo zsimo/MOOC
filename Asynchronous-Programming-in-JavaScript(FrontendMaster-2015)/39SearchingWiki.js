@@ -1,16 +1,17 @@
-var textBox = document.getElementsByTagName("input");
+var textBox = document.getElementsByTagName("input")[0];
 var observable;
 var keyPresses = Rx.Observable.fromEvent(textBox, "keypress");
 var _onNext = function (event) {
-	console.log("onNext");
-	// only once
-	observable.dispose();
+    console.log("onNext");
+    return event.keyChar;
+    // only once
+    observable.dispose();
 };
 var _onError = function () {
-	console.log("onError");
+    console.log("onError");
 };
 var _onCompleted = function () {
-	console.log("onCompleted");
+    console.log("onCompleted");
 };
 // observable = keyPresses.forEach(_onNext, _onError, _onCompleted);
 
@@ -25,38 +26,58 @@ var _onCompleted = function () {
 // searchWikiedia("pippo");
 
 // // create an observable from $.JSON
-var getWikipdiaSearchResults = function(term) {
-	return Rx.Observable.create(function forEach(observer) {
-		var cancelled = false;
-		var url = "http://en.wikipedia.org/w/api.php?action=opensearch&format=json&search="+ encodeURIComponent(term) +"&callback=?";
-		$.getJSON(url, function(data){
-			if (!cancelled) {
-				observer.onNext(data[1]);
-				// only one call
-				observer.onCompleted();
-			}
-		});
+var getWikipdiaSearchResultsShort = function(term) {
+	return Rx.Observable.create(
+        function forEach(observer) {
+		    var cancelled = false;
+		    var url = "http://en.wikipedia.org/w/api.php?action=opensearch&format=json&search="+ encodeURIComponent(term) +"&callback=?";
+		    $.getJSON(url, function(data){
+                if (!cancelled) {
+                    observer.onNext(data[1]);
+                    // only one call
+                    observer.onCompleted();
+                }
+            });
 
-		return function dispose() {
-			cancelled = true;
-		};
-	});
+            return function dispose() {
+                cancelled = true;
+            };
+        }
+    );
 };
 
-// getWikipdiaSearchResults("pippo").forEach(function(results) {
-// 	console.log(results );
-// });
 
-//observable = keyPresses
-//				.throttle(20)
-//				.map(_onNext, _onError, _onCompleted);
+//observable = getWikipdiaSearchResultsShort("pippo");
+//observable.forEach(function(results) {
+//    console.log(results);
+//});
 
-keyPresses.map(function (data) {
-	return "uno";
-}).forEach(function(data){
-	console.log(data);
-});
 
-// observable.forEach(function (data) {
-// 	console.log(data);
-// });
+
+
+var searchResultSet = keyPresses
+				.throttle(20)
+				.map(function (key) {
+                    return textBox.value;
+                })
+                // video 43
+                .distinctUntilChanged()
+                .map(function (search) {
+                    return getWikipdiaSearchResultsShort(search).retry(3); // retry in case of error
+                })
+                .switchLatest();
+
+
+_onNext = function (result) {
+    console.log(result);
+};
+_onError = function (error) {
+    console.log(error);
+};
+searchResultSet.forEach(_onNext, _onError);
+
+//keyPresses.map(function (data) {
+//	return "press";
+//}).forEach(function(data){
+//	console.log(data);
+//});
