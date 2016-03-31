@@ -52,24 +52,72 @@ var getWikipdiaSearchResultsShort = function(term) {
 //    console.log(results);
 //});
 
+var searchButtonClicks = Rx.Observable.fromEvent(document.getElementById("search-button"), "click");
 
 
+//searchButtonClicks.forEach(function() {
+//    console.log("click");
+//    document.getElementById("search-box").style.display = "block";
+//});
+// meglio doAction (restituisce un azione che verra eseguita quando con forEach)
+// prima
+var searchFormOpens = searchButtonClicks.doAction(function onNext() {
+    console.log("click");
+    document.getElementById("search-box").style.display = "block";
+});
 
-var searchResultSet = keyPresses
-				.throttle(20)
-				.map(function (key) {
+
+var searchResultSet =
+    // dopo
+    searchFormOpens.map(function() {
+        var closeClicks = Rx.Observable.fromEvent(document.getElementById("close-button"), "click");
+        var searchFormCloses = closeClicks.doAction(function () {
+            document.getElementById("search-box").style.display = "none";
+        });
+
+        return keyPresses
+                .throttle(20)
+                .map(function (key) {
                     return textBox.value;
                 })
-                // video 43
+                // video 43 // do not search twice for the same chars
                 .distinctUntilChanged()
+                // do not search for empty string
+                .filter(function (search) {
+                    return search.trim().length > 0;
+                })
                 .map(function (search) {
                     return getWikipdiaSearchResultsShort(search).retry(3); // retry in case of error
                 })
-                .switchLatest();
+                .switchLatest()
+                .takeUntil(searchFormCloses)
+                ;
+    })
+    .switchLatest();
+
+// =============================================================================
+// base implementation for autocomplete (to be used)
+// ============================================================================
+//searchResultSet = keyPresses
+//    .throttle(20)
+//    .map(function (key) {
+//        return textBox.value;
+//    })
+//    // video 43 // do not search twice for the same chars
+//    .distinctUntilChanged()
+//    // do not search for empty string
+//    .filter(function (search) {
+//        return search.trim().length > 0;
+//    })
+//    .map(function (search) {
+//        return getWikipdiaSearchResultsShort(search).retry(3); // retry in case of error
+//    })
+//    .switchLatest();
 
 
 _onNext = function (result) {
     console.log(result);
+    document.getElementById("text-area").value = result.join("\n");
 };
 _onError = function (error) {
     console.log(error);
