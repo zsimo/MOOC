@@ -60,7 +60,7 @@ var searchButtonClicks = Rx.Observable.fromEvent(document.getElementById("search
 //    document.getElementById("search-box").style.display = "block";
 //});
 // meglio doAction (restituisce un azione che verra eseguita quando con forEach)
-// prima
+// old basic implementation
 var searchFormOpens = searchButtonClicks.doAction(function onNext() {
     console.log("click");
     document.getElementById("search-box").style.display = "block";
@@ -68,7 +68,7 @@ var searchFormOpens = searchButtonClicks.doAction(function onNext() {
 
 
 var searchResultSet =
-    // dopo
+    // new implementation
     searchFormOpens.map(function() {
         var closeClicks = Rx.Observable.fromEvent(document.getElementById("close-button"), "click");
         var searchFormCloses = closeClicks.doAction(function () {
