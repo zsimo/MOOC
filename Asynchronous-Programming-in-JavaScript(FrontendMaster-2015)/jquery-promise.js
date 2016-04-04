@@ -2,6 +2,7 @@
  * Created by simonesacchi on 04/04/16.
  */
 
+// https://jsbin.com/vohiwexido/edit?js,console
 
 var operations = (function () {
     var actions = [];
@@ -58,13 +59,18 @@ var callbacks = {
 };
 
 
-
+//[$.Deferred(callbacks.beforeStart01), $.Deferred(callbacks.beforeStart02), $.Deferred(callbacks.beforeStart03)]
+//    .forEach(function (deferred) {
+//        deferred.done(callbacks.done)
+//                .fail(callbacks.fail);
+//    });
 
 $.when(
     $.Deferred(callbacks.beforeStart01),
     $.Deferred(callbacks.beforeStart02),
     $.Deferred(callbacks.beforeStart03)
 )
+//.then(callbacks.done, callbacks.fail);
 .done(callbacks.done)
 .fail(callbacks.fail);
 
