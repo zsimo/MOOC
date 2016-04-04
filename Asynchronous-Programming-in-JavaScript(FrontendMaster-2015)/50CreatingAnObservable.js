@@ -38,11 +38,29 @@ Observable.prototype = {
                 }
             );
         });
+    },
+    filter : function (testFunction) {
+        var self = this;
+        return new Observable(function forEach(observer) {
+            self.forEach(
+                function onNext (x) {
+                    if (testFunction(x)) {
+                        observer.onNext(x);
+                    }
+                },
+                function onError(e) {
+                    observer.onError(e);
+                },
+                function onCompleted() {
+                    observer.onCompleted();
+                }
+            );
+        });
     }
 };
 
 Observable.fromEvent = function (dom, eventName) {
-    return new Obervable(function forEach(observer) {
+    return new Observable(function forEach(observer) {
         var handler = function (event) {
             observer.onNext(event);
         };
@@ -57,7 +75,12 @@ Observable.fromEvent = function (dom, eventName) {
     });
 };
 
-
-new Observable(function forEach(observer) {
-
+var buttonClicks = Observable.fromEvent(document.getElementById("search-button"), "click")
+                            .map(function (event) {
+                                return "uno";
+                            });
+buttonClicks.forEach(function (data) {
+    console.log(data);
 });
+
+
