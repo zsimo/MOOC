@@ -1,14 +1,4 @@
-Array.prototype.concatAll = function() {
-	var result = [];
-	this.forEach(function(items){
-		items.forEach(function(item){
-			result.push(item);
-		});
-	});
-	return result;
-};
-
-// MAP: creates a NEW array with the results of calling a 
+// MAP: creates a NEW array with the results of calling a
 // provided function on every element in this array
 // with out changing the orginal arrayz
 Array.prototype.map = Array.prototype.map || function(projectionFunction) {

@@ -1,7 +1,7 @@
 // Observable = Collection + Time
 		time
-------------------------->
-{1.....2................3}
+// ------------------------->
+// {1.....2................3}
 
 // come un foreach con tempi diversi 
 // tra un item e un altro

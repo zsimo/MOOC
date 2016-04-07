@@ -30,9 +30,15 @@ var source02 = Rx.Observable.create(function (observer) {
 });
 
 
-var source = Rx.Observable.zip(source01, source02);
-//var source = source01.And(source02);
+//var source = Rx.Observable.zip(source01, source02);
+//var disposable = source.forEach(function (x) {
+//    console.log(x);
+//});
 
-var disposable = source.forEach(function (x) {
-    console.log(x);
-});
+var observable = Rx.Observable.concat(source01, source02);
+
+var onNext = function (observable) {
+    console.log(observable);
+    //observable.subscribe(onNext);
+};
+observable.subscribe(onNext);

@@ -5,6 +5,7 @@ console.log("");
 // Events and Arrays are both COLLECTIONS
 
 // ITERATORS:
+// PRODUCER <== CONSUMER pull
 // - producer
 // - consumer pull the values one item at the time
 // fino a quando:
@@ -16,6 +17,7 @@ if (hasNext()) {
 }
 
 // OBSERVERS:
+// PRODUCER push ==> CONSUMER
 // - producer push the values one item at the time
 // - consumer
 // il **producer** ha il controllo, fa scattare l'evento
