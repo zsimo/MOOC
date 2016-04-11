@@ -3,6 +3,12 @@
  */
 
 
+
+var firstName = document.getElementById("firstName");
+firstName.value = "sss";
+var age = document.getElementById("age");
+
+
 var observable = function (obj) {
     return Rx.Observable.create(function forEach(observer) {
         var handler = function (e) {
@@ -17,13 +23,15 @@ var observable = function (obj) {
     });
 };
 
-var person = {name : "simone"};
-var onNext = function () {
-  console.log("change");
+var person = {firstName : "simone", age:29};
+var onNext = function (changes) {
+    console.log(firstName);
+    firstName.value = person.firstName;
 };
+
 
 var observer = observable(person)
     .take(1)
     .subscribe(onNext);
 
-person.name = "antonio";
+person.firstName = "antonio";
