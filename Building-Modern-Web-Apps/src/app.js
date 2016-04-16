@@ -1,4 +1,5 @@
 var React = require("react");
+var styles = require("./styles/main.css");
 
 var Hello = React.createClass({
     render : function () {
