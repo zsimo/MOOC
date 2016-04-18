@@ -2,23 +2,16 @@
  * Created by simonesacchi on 17/04/16.
  */
 var React = require("react");
-var localLinks = require("local-links");
+var NavHelper = require("./components/nav-helper");
 
 
 module.exports = React.createClass({
-    onClick : function (event) {
-        var pathName = localLinks.getLocalPathname(event);
-
-        if (pathName) {
-            event.preventDefault();
-            app.router.history.navigate(pathName);
-        }
-    },
+    displayName : "custom display name",
 
     render : function () {
         // return the current status
         return (
-            <div onClick={this.onClick}>
+            <NavHelper>
                 <nav className='top-nav top-nav-light cf' role='navigation'>
                     <input id='menu-toggle' className='menu-toggle' type='checkbox'/>
                     <label htmlFor='menu-toggle'>Menu</label>
@@ -31,7 +24,7 @@ module.exports = React.createClass({
                 <div className='container'>
                     {this.props.children}
                 </div>
-            </div>
+            </NavHelper>
         )
     }
 });
