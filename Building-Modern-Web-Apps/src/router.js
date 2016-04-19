@@ -1,6 +1,7 @@
 /**
  * Created by simonesacchi on 16/04/16.
  */
+var App = require("ampersand-app");
 var Router = require("ampersand-router");
 var React = require("react");
 var Repos = require("./pages/repos");
@@ -13,7 +14,7 @@ var xhr = require("xhr");
 module.exports = Router.extend({
     renderPage : function (page, opt) {
         if (opt.layout) {
-            page = <Layout>{page}</Layout>;
+            page = <Layout me={App.me}>{page}</Layout>;
         }
         React.render(page, document.body)
     },
@@ -21,6 +22,7 @@ module.exports = Router.extend({
         "" : "public",
         "repos" : "repos",
         "login" : "login",
+        "logout" : "logout",
         "auth/callback?:query" : "authCallback"
     },
 
@@ -44,6 +46,11 @@ module.exports = Router.extend({
             });
     },
 
+    logout : function () {
+        window.localStorage.clear();
+        window.location = "/";
+    },
+
     authCallback : function (query) {
         query = qs.parse(query);
         console.log(query);
@@ -52,6 +59,8 @@ module.exports = Router.extend({
             json : true
         }, function (err, req, body) {
             console.log(body);
+            App.me.token = body.token;
+            this.redirectTo("/repos");
         }.bind(this));
     }
 });

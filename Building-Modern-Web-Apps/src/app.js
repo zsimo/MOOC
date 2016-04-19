@@ -13,10 +13,13 @@
 // return always a singleton object
 var App = require("ampersand-app");
 var Router = require("./router");
+var Me = require("./models/me");
 require("./styles/main.styl");
 
 App.extend({
   init : function () {
+      this.me = new Me();
+      this.me.fetchInitialData();
       this.router = new Router();
       this.router.history.start();
   }
