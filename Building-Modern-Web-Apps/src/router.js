@@ -33,9 +33,8 @@ module.exports = Router.extend({
     },
 
     repos : function () {
-        console.log("repos");
         //React.render(<Repos/>, document.body);
-        this.renderPage(<Repos/>, {layout: true});
+        this.renderPage(<Repos repos={App.me.repos}/>, {layout: true});
     },
 
     login : function () {
