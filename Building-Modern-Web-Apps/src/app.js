@@ -15,6 +15,7 @@ var App = require("ampersand-app");
 var Router = require("./router");
 var Me = require("./models/me");
 require("./styles/main.styl");
+var icons = require("octicons/octicons/octicons.css");
 
 App.extend({
   init : function () {
