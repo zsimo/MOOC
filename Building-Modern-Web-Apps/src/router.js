@@ -53,7 +53,7 @@ module.exports = Router.extend({
 
     repoDetail : function (owner, name) {
         var model = App.me.repos.getByFullName(owner + "/" + name);
-        this.renderPage(<RepoDetail repo={model}/>, {layout: true})
+        this.renderPage(<RepoDetail repo={model} labels={model.labels}/>, {layout: true})
     },
 
     authCallback : function (query) {
