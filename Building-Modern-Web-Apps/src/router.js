@@ -6,6 +6,7 @@ var Router = require("ampersand-router");
 var React = require("react");
 var Repos = require("./pages/repos");
 var Public = require("./pages/public");
+var RepoDetail = require("./pages/repo-detail");
 var Layout = require("./layout");
 var qs = require("qs");
 var xhr = require("xhr");
@@ -23,6 +24,7 @@ module.exports = Router.extend({
         "repos" : "repos",
         "login" : "login",
         "logout" : "logout",
+        "repo/:owner/:name" : "repoDetail",
         "auth/callback?:query" : "authCallback"
     },
 
@@ -33,7 +35,6 @@ module.exports = Router.extend({
     },
 
     repos : function () {
-        //React.render(<Repos/>, document.body);
         this.renderPage(<Repos repos={App.me.repos}/>, {layout: true});
     },
 
@@ -50,9 +51,13 @@ module.exports = Router.extend({
         window.location = "/";
     },
 
+    repoDetail : function (owner, name) {
+        var model = App.me.repos.getByFullName(owner + "/" + name);
+        this.renderPage(<RepoDetail repo={model}/>, {layout: true})
+    },
+
     authCallback : function (query) {
         query = qs.parse(query);
-        console.log(query);
         xhr({
             url : "https://labelr-dev.herokuapp.com/authenticate/" + query.code,
             json : true

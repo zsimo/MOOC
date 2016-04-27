@@ -28,6 +28,7 @@ App.extend({
 
 App.init();
 
+// exaple of pub/sub mechanism implementation
 App.on("local-click", function (data) {
     console.log(arguments);
 });
