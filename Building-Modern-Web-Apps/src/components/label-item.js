@@ -11,10 +11,9 @@ module.exports = React.createClass({
 
     render : function () {
         // return the current status
+        var label = this.props.label;
         return (
-            <div {...this.props} onClick={this.onClick}>
-                {this.props.label.color}
-            </div>
+            <li>{label.color}</li>
         )
     }
 });

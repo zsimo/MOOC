@@ -3,7 +3,7 @@
  */
 var React = require("react");
 var ampersandMixin = require("ampersand-react-mixin");
-var Label = require("../components/label");
+var Label = require("../components/label-item");
 
 module.exports = React.createClass({
     mixins : [ampersandMixin],
@@ -19,7 +19,7 @@ module.exports = React.createClass({
                 <ul>
                     {
                         labels.map(function (label) {
-                            return <li><Label label={label}></Label></li>
+                            return <Label label={label}></Label>
                         })
                     }
                 </ul>
