@@ -3,31 +3,42 @@
  */
 var checkVariationObserver = Rx.Observable.startAsync(
     function () {
-        return $.getJSON("test.json");
+        return $.getJSON("test-variations.json");
     })
-    //.map(function (item) {
-    //    item.name = "checkVariation";
-    //    return item;
-    //})
-    .delay(2000);
+    .map(function (item) {
+        item.name = "variations_added";
+        return item;
+    })
+    .delay(1000)
+    ;
 
 var updateObserver = Rx.Observable.startAsync(
     function () {
-        return $.getJSON("test.json");
+        return $.getJSON("test-update.json");
     })
-    //.map(function (item) {
-    //    item.name = "update";
-    //    return item;
-    //})
-    .delay(2000);
+    .map(function (item) {
+        item.name = "update_added";
+        return item;
+    })
+    .delay(500)
+    ;
 
 
 var observable = Rx.Observable
-                    .concat(checkVariationObserver, updateObserver)
-                    .map(function (item) {
-                        item.name = "update";
+                    .amb(checkVariationObserver, updateObserver)
+                    .concat(function (item) {
+                        if (item.test === "variations") {
+                            item.name = "variations_added";
+                        } else if (item.test === "update") {
+                            item.name = "update_added";
+                        } else {
+                            item.name = "???";
+                        }
+
                         return item;
-                    });
+                    })
+    ;
+
 
 observable.subscribe(
     function (itemEmitted) {
@@ -38,6 +49,6 @@ observable.subscribe(
     }
 
     , function() {
-        console.log("completed 01");
+        console.log("completed");
     }
 );
