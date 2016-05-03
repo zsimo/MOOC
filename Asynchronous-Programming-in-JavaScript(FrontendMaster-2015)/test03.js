@@ -52,3 +52,20 @@ observable.subscribe(
         console.log("completed");
     }
 );
+
+
+
+var clicks = Rx.Observable.fromEvent(document.getElementById("button"), "click");
+var timerObserver = Rx.Observable.interval(1000)
+                    .takeUntil(clicks);
+timerObserver.subscribe(
+    function (item) {
+        console.log(item);
+    }
+    ,function (err) {
+        console.log(err);
+    }
+    ,function () {
+        console.log("onCompleted by clicking");
+    }
+);
