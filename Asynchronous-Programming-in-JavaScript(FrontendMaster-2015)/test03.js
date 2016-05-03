@@ -25,8 +25,8 @@ var updateObserver = Rx.Observable.startAsync(
 
 
 var observable = Rx.Observable
-                    .amb(checkVariationObserver, updateObserver)
-                    .concat(function (item) {
+                    .concat(checkVariationObserver, updateObserver)
+                    .map(function (item) {
                         if (item.test === "variations") {
                             item.name = "variations_added";
                         } else if (item.test === "update") {
