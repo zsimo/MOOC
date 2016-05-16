@@ -2,4 +2,6 @@ picksRandom = require "./picks-random"
 
 module.exports = ->
   operator: picksRandom(["+", "-", "*", "/"])
-  operands: picksRandom([1..100])
+  operands:
+    left : picksRandom([0..100])
+    right : picksRandom([0..100])
