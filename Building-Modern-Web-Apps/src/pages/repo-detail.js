@@ -19,7 +19,7 @@ module.exports = React.createClass({
                 <ul>
                     {
                         labels.map(function (label) {
-                            return <Label label={label}></Label>
+                            return <Label key={label.name} label={label}></Label>
                         })
                     }
                 </ul>

@@ -13,6 +13,13 @@ module.exports = Model.extend( {
     props : {
         name : "string",
         color : "string"
+    },
+
+    session : {
+        editing : {
+            type : "boolean",
+            default : false
+        }
     }
 
 });
