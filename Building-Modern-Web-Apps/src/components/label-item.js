@@ -12,6 +12,20 @@ module.exports = React.createClass({
         console.log("click");
     },
 
+    onDeleteClick : function (event) {
+        event.preventDefault();
+        alert("delete");
+
+        //this.props.label.destroy({
+        //    success : function () {
+        //        console.log("success");
+        //    },
+        //    error : function () {
+        //        console.log("error");
+        //    }
+        //});
+    },
+
     onCancelClick : function (event) {
         event.preventDefault();
         this.props.label.editing = false;
@@ -44,7 +58,7 @@ module.exports = React.createClass({
                     <span className='label-color' style={{backgroundColor:cssColor}}>&nbsp;</span>
                     <span>{label.name}</span>
                     <span onClick={this.onEditClick} className='octicon octicon-pencil'></span>
-                    <span className='octicon octicon-x'></span>
+                    <span onclick={this.onDeleteClick} className='octicon octicon-x'></span>
                 </div>
             );
         }
