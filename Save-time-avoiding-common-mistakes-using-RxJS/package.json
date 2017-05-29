@@ -1,0 +1,9 @@
+{
+  "name": "Save-time-avoiding-common-mistakes-using-RxJS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^2.6.1"
+  }
+}
