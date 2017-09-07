@@ -49,6 +49,11 @@ var pluto = function () {
 };
 ```
 
+### Closure
+```
+When a function remembers its lexical scope even when the function is executed outside that lexical scope
+```
+
 ### IIFE (Immediately Invoked Function Expression)
 ```javascript
 // is a function expression because the word 'function' is NOT the first thing in the statement
