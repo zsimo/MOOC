@@ -7,5 +7,7 @@ document.write("<h1>Hello!</h1>");
 
 
 var shadow = require("./shadow");
-
 shadow();
+
+var functions = require("./functions");
+functions();
