@@ -1,4 +1,4 @@
 [Deep JS foundations](https://frontendmasters.com/courses/javascript-foundations/)
 
 
-video 16
+video 20, min 8

@@ -10,6 +10,8 @@ module.exports = function () {
         id;
         //id.length;
     } catch(err) {
+        // err variable exists only in the catch scope
+        // instead, id is available at the global scope
         var id = 3;
         var id2 = 4;
     }
