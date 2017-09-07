@@ -7,7 +7,11 @@ document.write("<h1>Hello!</h1>");
 
 
 var shadow = require("./shadow");
-shadow();
+//shadow();
 
 var functions = require("./functions");
-functions();
+//functions();
+
+var tryCatch = require("./try_catch");
+tryCatch();
+
