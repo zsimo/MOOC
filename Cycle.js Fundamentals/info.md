@@ -1,0 +1,1 @@
+video 5 Read Effects from the DOM with Click Events
