@@ -1,1 +1,1 @@
-video 5 Read Effects from the DOM with Click Events
+video 7 Make Our Toy DOM Driver More Flexible
