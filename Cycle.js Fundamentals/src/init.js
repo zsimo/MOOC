@@ -3,6 +3,7 @@
  */
 
 import xs from 'xstream';
+import run from '@cycle/run';
 import fromEvent from 'xstream/extra/fromEvent';
 
 document.write('<div id="app"></div>');
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 .map(function (i) {
                     return "Second: " + i;
                 }),
-            log: xs.periodic(2000)
+            log: xs.periodic(3000)
                 .fold(function (prev) {
                     return prev + 1;
                 }, 0)
@@ -60,21 +61,29 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    function run (mainFn, drivers) {
-        var fakeDOMSink = xs.create();
-        var domSource = domDriver(fakeDOMSink);
-        var sinks = mainFn({
-            DOM: domSource
-        });
-        fakeDOMSink.imitate(sinks.DOM);
-
-        //Object.keys(drivers).forEach(function (key) {
-        //    if (sinks[key]) {
-        //        drivers[key](sinks[key]);
-        //    }
-        //});
-
-    }
+    //function run (mainFn, drivers) {
+    //
+    //    // source = input (read) effect
+    //    // sink = output (write) effect
+    //
+    //    var fakeSinks = {};
+    //    Object.keys(drivers).forEach(function (key) {
+    //        fakeSinks[key] = xs.create();
+    //    });
+    //
+    //    var sources = {};
+    //    Object.keys(drivers).forEach(function (key) {
+    //        sources[key] = drivers[key](fakeSinks[key]);
+    //    });
+    //
+    //    var sinks = mainFn(sources);
+    //
+    //    Object.keys(sinks).forEach(function (key) {
+    //        fakeSinks[key].imitate(sinks[key]);
+    //    });
+    //
+    //
+    //}
 
 
     run(main, {

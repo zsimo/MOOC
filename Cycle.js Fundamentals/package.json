@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
+    "@cycle/run": "^3.2.0",
     "html-webpack-plugin": "^2.28.0",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5",
