@@ -1,1 +1,1 @@
-video 7 Make Our Toy DOM Driver More Flexible
+video 9 Use Hyperscript in Cycle.js as an Alternative to Template Languages

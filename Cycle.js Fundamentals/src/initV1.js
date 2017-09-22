@@ -2,8 +2,6 @@
  * Created by simonesacchi on 13/09/2017.
  */
 
-"use strict";
-
 import xs from 'xstream';
 import run from '@cycle/run';
 import fromEvent from 'xstream/extra/fromEvent';
@@ -17,11 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function main (sources) {
 
-        var mouseover$ = sources.DOM.selectEvents("span", "mouseover");
+        var click$ = sources.DOM;
 
         // LOGIC
         return {
-            DOM: mouseover$
+            DOM: click$
                 .startWith(null)
                 .map(function () {
                     return xs.periodic(1000)
@@ -31,17 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 })
                 .flatten()
                 .map(function (i) {
-                    return {
-                        tagName: "H1",
-                        children: [
-                            {
-                                tagName: "SPAN",
-                                children: [
-                                    "Second: " + i
-                                ]
-                            }
-                        ]
-                    };
+                    return "Second: " + i;
                 }),
             log: xs.periodic(3000)
                 .fold(function (prev) {
@@ -50,43 +38,17 @@ document.addEventListener("DOMContentLoaded", function() {
         };
     }
 
-
-
-    function domDriver (obj$) {
-
-        function createElement (obj) {
-            var element = document.createElement(obj.tagName);
-            obj.children.forEach(function (child) {
-                if (typeof child === "object") {
-                    element.appendChild(createElement(child));
-                } else {
-                    element.textContent = child;
-                }
-            });
-//            element.textContent = obj.children[0];
-            return element;
-        }
-
-
+    function domDriver (text$) {
         // EFFECTS (change external word)
-        obj$.subscribe({
-            next: function (obj) {
-                var container = document.getElementById("app");
-                container.textContent = "";
-                var element = createElement(obj);
-                container.append(element);
+        text$.subscribe({
+            next: function (str) {
+                var elem = document.getElementById("app");
+                elem.textContent = str;
             }
         });
 
 
-        var domSource = {
-            selectEvents: function (tagName, eventType) {
-                return fromEvent(document, eventType)
-                    .filter(function (ev) {
-                        return ev.target.tagName === tagName.toUpperCase();
-                    });
-            }
-        };
+        var domSource = fromEvent(document, "click");
         return domSource;
     }
 
