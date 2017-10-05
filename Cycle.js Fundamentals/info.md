@@ -1,1 +1,1 @@
-video 13 Fetch Data using the Cycle.js HTTP Driver
+video 15 Organize your Cycle.js Application into the Model-View-Intent Pattern
