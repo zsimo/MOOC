@@ -1,1 +1,1 @@
-video Challenge 3: Refactoring into a Component
+video Vue Snippets
