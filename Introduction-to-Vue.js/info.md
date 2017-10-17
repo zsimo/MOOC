@@ -1,1 +1,1 @@
-video Vue Snippets
+video: Lifecycle Hooks
