@@ -1,1 +1,1 @@
-video: Introducing Animations
+video: Introducing Vuex
