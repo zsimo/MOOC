@@ -1,1 +1,1 @@
-video: Introducing Vuex
+video: Examining a Vuex Setup
