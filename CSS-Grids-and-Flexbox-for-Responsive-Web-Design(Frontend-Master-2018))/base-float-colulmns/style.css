@@ -1,0 +1,30 @@
+
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col-1 {
+    float: left;
+    margin-left: 4%;
+    width: 20%;
+    height: 50px;
+    background: lightskyblue;
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .col-1 {
+        width: 44%;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .col-1 {
+        width: 98%;
+        margin: 1%;
+        float: none;
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "base-webpack-dev-server",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "css-loader": "^0.28.9",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.20.2",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "bin": {
+    "webpack": "./node_modules/.bin/webpack",
+    "webpack-dev-server": "node_modules/.bin/webpack-dev-server"
+  }
+}
