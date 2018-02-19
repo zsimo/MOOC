@@ -10,7 +10,8 @@
     "webpack-dev-server": "^2.11.1"
   },
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build": "webpack"
   },
   "bin": {
     "webpack": "./node_modules/.bin/webpack",

@@ -4,7 +4,7 @@ module.exports = function (env = {}) {
 
     let path = require("path");
     let HtmlWebpackPlugin = require('html-webpack-plugin');
-    let srcFolder = "./base-float-colulmns/";
+    let srcFolder = "./base-float-columns/";
 
     const publicPath = path.resolve(__dirname, 'public');
     const jsPath = path.resolve(publicPath, 'js');
@@ -24,7 +24,7 @@ module.exports = function (env = {}) {
 
         plugins: [
             new HtmlWebpackPlugin({
-                template: srcFolder + "index.html"
+                template: srcFolder + "src.html"
             })
         ],
         module: {
