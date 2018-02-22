@@ -10,8 +10,10 @@
     float: left;
     margin-left: 4%;
     width: 20%;
+    max-width: 260px;
     height: 50px;
     background: lightskyblue;
+    margin-bottom: 20px;
 }
 
 
