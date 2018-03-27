@@ -33,6 +33,10 @@
         article {
             flex: 1;
         }
+        object {
+            width: 100%;
+            height: 100%;
+        }
         nav {
             order: -1;
         }
@@ -40,11 +44,10 @@
 </head>
 <body>
 
-<object data="https://simonesacchi.com/dashboard/public/iat" onload="console.log('ok');"></object>
 
 <header>header</header>
 <main>
-    <article>article</article>
+    <article><object data="https://simonesacchi.com/dashboard/public/iat" onload="console.log('ok');"></object></article>
     <nav>nav</nav>
     <aside>aside</aside>
 </main>
