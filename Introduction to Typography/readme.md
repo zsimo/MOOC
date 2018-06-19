@@ -14,4 +14,4 @@ https://www.coursera.org/learn/typography/
 - 8 and 6 point footnotes and other less important information
 
 
-- (Google fonts)[https://fonts.google.com/]
+- [Google fonts](https://fonts.google.com)
