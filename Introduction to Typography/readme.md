@@ -1,4 +1,5 @@
-https://www.coursera.org/learn/typography/
+###[see](https://www.coursera.org/learn/typography/)
+
 
 
 - font: fisical manifestation of type (metal, film, code)
