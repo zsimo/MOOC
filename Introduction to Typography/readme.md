@@ -12,3 +12,6 @@ https://www.coursera.org/learn/typography/
 - 36 and 24 subheads
 - 12, 11, 10, and 9 point text
 - 8 and 6 point footnotes and other less important information
+
+
+- (Google fonts)[https://fonts.google.com/]
