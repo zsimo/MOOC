@@ -10,9 +10,9 @@
     "autoprefixer": "^5.2.0",
     "autoprefixer-core": "^5.2.0",
     "autoprefixer-stylus": "^0.7.0",
-    "babel": "^5.5.8",
-    "babel-core": "^5.5.8",
-    "babel-loader": "^5.1.4",
+    "babel": "^6.0.0",
+    "babel-core": "^6.9.0",
+    "babel-loader": "^6.0.0",
     "css-loader": "^0.15.1",
     "file-loader": "^0.8.4",
     "hjs-webpack": "^2.6.0",
@@ -31,15 +31,16 @@
     "react": "^0.13.3",
     "react-hot-loader": "^1.2.7",
     "slugger": "^1.0.0",
-    "standard": "^4.3.1",
+    "standard": "^6.0.0",
     "style-loader": "^0.12.3",
     "stylus-loader": "^1.2.1",
-    "surge": "^0.14.2",
+    "surge": "^0.20.0",
     "url-loader": "^0.5.6",
     "webpack": "^1.9.11",
     "webpack-dev-server": "^1.9.0",
     "xhr": "^2.0.2",
-    "yeticss": "^6.0.7"
+    "yeticss": "^6.0.7",
+    "snyk": "^1.88.0"
   },
   "license": "MIT",
   "private": true,
@@ -47,6 +48,9 @@
     "build": "webpack",
     "deploy": "surge -p public -d labelr.surge.sh",
     "start": "webpack-dev-server",
-    "yolo": "git add --all && git commit -am \"$(date)\" && npm version minor && git push origin master --tags && npm run build && npm run deploy"
-  }
+    "yolo": "git add --all && git commit -am \"$(date)\" && npm version minor && git push origin master --tags && npm run build && npm run deploy",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
