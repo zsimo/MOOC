@@ -1,0 +1,5 @@
+MongoDB shell version: 2.4.4
+connecting to: test
+switched to db weather
+{ "State" : "New Mexico", "Temperature" : 0 }
+bye

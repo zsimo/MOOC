@@ -1,0 +1,5 @@
+MongoDB shell version: 2.4.6
+connecting to: test
+switched to db snps
+{ "result" : [ { "_id" : "N2", "total" : 56036 } ], "ok" : 1 }
+bye

@@ -1,0 +1,15 @@
+MongoDB shell version: 2.4.6
+connecting to: test
+switched to db dba
+{
+	"result" : [
+		{
+			"_id" : {
+				"state" : "PA"
+			},
+			"zips_num" : 1458
+		}
+	],
+	"ok" : 1
+}
+bye

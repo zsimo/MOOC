@@ -1,0 +1,6 @@
+Successfully created user
+Successfully created post
+Successfully added first comment
+Successfully added second comment
+Blog validated successfully!
+Your validation code is: jyTT4COdsQxHBb1tf01G
