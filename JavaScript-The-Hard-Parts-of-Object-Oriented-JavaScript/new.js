@@ -10,7 +10,7 @@ function userCreator (name, score) {
     // this is automatically bounded to an empty object
     //var this = {};
 
-    // 2. new bounds this.__proto__ to userCreator.prototype
+    // 2. link this.__proto__ to userCreator.prototype
 
     this.name = name;
     this.score = score;
