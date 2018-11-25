@@ -13,8 +13,10 @@ function userCreator (name, score) {
      * @type {any} empty object
      */
     var newUser = Object.create(userFunctionStore);
+
     newUser.name = name;
     newUser.score = score;
+    
     return newUser;
 }
 

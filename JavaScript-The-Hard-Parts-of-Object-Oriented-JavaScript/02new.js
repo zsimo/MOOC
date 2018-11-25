@@ -4,11 +4,11 @@
 function userCreator (name, score) {
 
     // 1.
-    // new crea un nuovo oggetto
-    // var newUser = Object.create(userFunctionStore);
+    // new creates a new (implicit) object
+    // without new -> var newUser = Object.create(userFunctionStore);
 
-    // this is automatically bounded to an empty object
-    //var this = {};
+    // this is automatically bounded to that empty object
+    // similar to: var this = {};
 
     // 2. link this.__proto__ to userCreator.prototype
 
@@ -17,7 +17,7 @@ function userCreator (name, score) {
 
 
     // 3.
-    // new ritorna il nuovo oggetto creato
+    // new returns the just created object
     // return this;
 }
 
