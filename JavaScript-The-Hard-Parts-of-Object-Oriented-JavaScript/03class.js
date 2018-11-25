@@ -8,6 +8,9 @@ class userCreator {
         this.score = score;
     }
 
+    /**
+     * every function have been automatically bounded to the userCreator.prototype
+     */
     increment () {
         this.score ++;
     }
