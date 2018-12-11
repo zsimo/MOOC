@@ -15,10 +15,14 @@
 
 
 var Queue = require("./Week01/03Queue");
-
-Queue.enqueue("uno");
-Queue.enqueue("due");
-Queue.dequeue();
+var q1 = Queue();
+var q2 = Queue();
 
 
-console.log(Queue.get());
+q1.enqueue("uno");
+q1.enqueue("due");
+q1.dequeue();
+
+
+console.log(q1.get());
+console.log(q2.get());

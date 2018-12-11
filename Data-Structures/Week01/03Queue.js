@@ -1,22 +1,29 @@
 
 "use strict";
 
-
-var queue = [];
-
-module.exports = {
+var functions = {
 
     get: function () {
-        return queue;
+        return this.queue;
     },
     enqueue: function (item) {
-        queue.push(item);
+        this.queue.push(item);
     },
 
     dequeue: function () {
-        return queue.splice(0, 1)[0];
+        return this.queue.splice(0, 1)[0];
     },
     isEmpty: function () {
-        return queue.length === 0;
+        return this.queue.length === 0;
     }
+};
+
+
+
+module.exports = function () {
+    var obj = Object.create(functions);
+
+    obj.queue = [];
+
+    return obj;
 };
