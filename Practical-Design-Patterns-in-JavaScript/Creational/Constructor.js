@@ -14,21 +14,18 @@ var Task = function (name) {
     this.name = name;
     this.completed = false;
 
-    this.complete = function () {
-      this.completed = true;
-    };
-
-    this.save = function () {
-        console.log("saving: " + this.name);
-    }
-
 
 };
 
-// Protor
+Task.prototype.complete = function () {
+    this.completed = true;
+};
+
+Task.prototype.save = function () {
+    console.log("saving: " + this.name);
+}
 
 
-var task1 = new Task("dddd01");
-var task2 = new Task("dddd02");
-var task3 = new Task("dddd03");
-var task4 = new Task("dddd04");
+
+
+module.exports = Task;
