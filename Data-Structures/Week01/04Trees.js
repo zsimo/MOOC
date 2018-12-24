@@ -24,7 +24,9 @@ var functions = {
 };
 
 var node = {
-
+    left: undefined,
+    right: undefined,
+    key: "dosadmdsaosa"
 };
 
 
