@@ -1,4 +1,4 @@
-
+"use strict";
 
 var Task = require("Creational/Constructor");
 
