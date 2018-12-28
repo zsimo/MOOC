@@ -79,7 +79,7 @@ for (var i = 0; i < 1000000; i++) {
 };
 
 var afterMemory = process.memoryUsage().heapUsed;
-console.log('used memory ' + (afterMemory - initialMemory) / 1000000);
+console.log('used memory ' + ((afterMemory - initialMemory) / 1000000)  + "mb");
 
 console.log("tasks: " + tasks.getCount());
 console.log("flyweights: " + FlyweightFactory.getCount());
