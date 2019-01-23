@@ -22,4 +22,7 @@ var repoFactory = function () {
         }
     }
 };
+// As a special case, for the new operator only, JavaScript simplifies the grammar
+// by allowing the parenthesis to be omitted if there are no arguments in the function call
+// see: https://stackoverflow.com/questions/3034941/can-we-omit-parentheses-when-creating-an-object-using-the-new-operator
 module.exports = new repoFactory;
