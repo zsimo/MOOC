@@ -1,3 +1,10 @@
+/**
+ * share functions across objects
+ *
+ * @param data
+ * @constructor
+ */
+
 var Task = function (data) {
     this.flyweight = FlyweightFactory.get(data.project, data.priority, data.user, data.completed);
     this.name = data.name;
