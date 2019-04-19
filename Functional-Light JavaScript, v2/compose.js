@@ -1,6 +1,7 @@
 "use strict";
 
 function compose () {
+    // same as function compose (...funcs) {
     var funcs = Array.prototype.slice.call(arguments);
 
     return function (input) {
