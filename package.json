@@ -9,10 +9,10 @@
   "author": "simone.sacchi@nubilaria.com",
   "license": "MIT",
   "dependencies": {
+    "jquery": "~3.4.1",
     "nodemon": "^1.8.1",
     "purdy": "~1.4.1",
     "rx": "~4.0.7",
-    "jquery": "~>3.0.0",
     "webpack": "~1.12.6"
   },
   "devDependencies": {
