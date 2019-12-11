@@ -1,0 +1,19 @@
+"use strict";
+
+var paymentMachine = require("./paymentMachine");
+
+
+
+
+const checkState = paymentMachine.transition('method.cash', 'SWITCH_CHECK');
+const reviewState = paymentMachine.transition(checkState, 'NEXT');
+const previousState = paymentMachine.transition(reviewState, 'PREVIOUS');
+const nextState = paymentMachine.transition(reviewState, 'NEXT');
+const nextState2 = paymentMachine.transition(reviewState, 'NEXT');
+
+
+console.log(checkState);
+console.log(reviewState);
+console.log(previousState.value);
+console.log(nextState.value);
+console.log(nextState2.value);

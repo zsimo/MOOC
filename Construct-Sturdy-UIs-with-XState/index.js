@@ -2,14 +2,6 @@
 
 var {fetchMachine, interpret} = require("./machine");
 
-// var [sendToFetchMachine] = fetcMachine.withConfig({
-//     actions: {
-//         fetchData: (context, event) => {
-//             console.log('green');
-//         }
-//     }
-// });
-
 var fetchService = interpret(fetchMachine.withConfig({
     actions: {
         fetchData: (context, event) => {
