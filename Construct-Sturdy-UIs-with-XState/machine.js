@@ -39,6 +39,10 @@ module.exports = {
             successful: {
                 on: {
                     FETCH: "pending"
+                },
+                states: {
+                    widthData: {},
+                    widthoutData: {}
                 }
             }
         }
@@ -54,6 +58,11 @@ module.exports = {
                     message: event.message
                 };
             })
+        },
+        guards: {
+            hasData: function (context, event) {
+                return true;
+            }
         }
     }),
 
