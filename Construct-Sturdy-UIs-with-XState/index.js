@@ -24,3 +24,12 @@ if (fetchService.matches("successful")) {
     console.log("ok");
     console.log(fetchService.context.results);
 }
+
+
+
+// service = interpret(toggleMachine).onTransition(current =>
+//     this.setState({ current })
+// );
+//
+// this.service.start();
+// this.service.stop();
