@@ -1,6 +1,7 @@
 "use strict";
 
-var {fetchMachine, interpret} = require("./machine");
+var {interpret} = require("xstate");
+var fetchMachine = require("./machines/fetch");
 
 var fetchService = interpret(fetchMachine.withConfig({
     actions: {

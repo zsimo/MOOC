@@ -11,7 +11,7 @@ module.exports = function (env = {}) {
     console.log(env);
 
     return {
-        entry: "./index3.js",
+        entry: "./index2.js",
         output: {
             path: jsPath,
             filename: 'bundle.js'

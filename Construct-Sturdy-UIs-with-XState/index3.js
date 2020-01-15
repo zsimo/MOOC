@@ -1,54 +1,36 @@
-var { Machine, interpret, assign } = require('xstate');
+var { interpret } = require('xstate');
 
-// Stateless machine definition
-// machine.transition(...) is a pure function used by the interpreter.
-const toggleMachine = Machine({
-    id: 'toggle',
-    initial: 'inactive',
-    context: {
-        rating: ""
-    },
-    states: {
-        inactive: { on: { TOGGLE: 'active' } },
-        active: {
-            on: {
-                TOGGLE: {
-                    target: 'inactive',
-                    actions: assign({
-                        rating: function (ctx, event) {
-                            return event.value;
-                        }
-                    })
-                }
-            }
-        }
-    }
-});
+const toggleMachine  = require("./machines/toggle");
+
+// console.log(toggleMachine.initialState);
 
 // 1.
 // Machine instance with internal state
+//An interpreted, running instance of a statechart is called a service
 const toggleService = interpret(toggleMachine)
     .onTransition(function (state) {
         // console.log(state.value);
         return state;
     })
     .start();
-var a = toggleService.send('TOGGLE');
-a = toggleService.send({
+var newState = toggleService.send('TOGGLE');
+newState = toggleService.send({
     type: 'TOGGLE',
     value: "ciao"
 });
-
+// same syntax as:
+// toggleService.send('TOGGLE', { "value": value });
 
 
 // 2.
-// var a = toggleMachine.transition('inactive', 'TOGGLE');
+var oldState = 'inactive';
+// var newState = toggleMachine.transition(oldState, 'TOGGLE');
 
 
 
-console.log(a.value); // finite state
-console.log(a.context); // extended state
-console.log(a.actions); // side effects
+console.log(newState.value); // finite state
+console.log(newState.context); // extended state
+console.log(newState.actions); // side effects
 
-console.log(a.matches("active"));
-console.log(a.matches("inactive"));
+console.log(newState.matches("active"));
+console.log(newState.matches("inactive"));
