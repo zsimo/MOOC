@@ -13,8 +13,8 @@ const nextState = paymentMachine.transition(reviewState, 'NEXT');
 const nextState2 = paymentMachine.transition(reviewState, 'NEXT');
 
 
-console.log(checkState);
-console.log(reviewState);
+console.log(checkState.value);
+console.log(reviewState.value);
 console.log(previousState.value);
 console.log(nextState.value);
 console.log(nextState2.value);
