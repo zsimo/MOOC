@@ -26,6 +26,6 @@ const changeColorMachine = Machine(
             }),
         },
     }
-)
+);
 
 module.exports = changeColorMachine;
